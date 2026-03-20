@@ -2,19 +2,10 @@
 
 # 
 
-# !\[GitHub repo size](https://img.shields.io/github/repo-size/DamascoBruno/projeto-clinica-faculdade?style=for-the-badge)
-
-# !\[GitHub language count](https://img.shields.io/github/languages/count/DamascoBruno/projeto-clinica-faculdade?style=for-the-badge)
-
 # 
 
 # > Projeto desenvolvido para fins acadêmicos com o objetivo de gerenciar processos clínicos, agendamentos e prontuários médicos.
 
-# 
-
-# ---
-
-# 
 
 # \## 📂 Estrutura do Projeto
 
@@ -31,8 +22,6 @@
 # \*   \*\*`/assets`\*\*: Arquivos de mídia, ícones e logotipos.
 
 # \*   \*\*`/sql`\*\*: Scripts para criação e manutenção do banco de dados.
-
-# 
 
 # ---
 
