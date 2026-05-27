@@ -1,0 +1,35 @@
+html{
+    size: 62.5%;
+}
+:root{
+
+    /* FUNDOS */
+    --fundo-primario: #fcfaf5;
+    --fundo-secundario: #e9e5da;
+
+    /* VERDES */
+    --texto-login: #afc496;
+    --green-medium: #919f88;
+    --verde-cta: #5F6F52;
+    --verde-texto: #3E4A3F;
+
+    /* MARROMS */
+    --marrom-selecao-item: #9f8675;
+    --marrom-textos: #6E5A4F;
+
+    /* NEUTROS */
+    --branco: #ffffff;
+}
+#carouselExampleCaptions{
+    width: 50rem;
+    height: 30rem;
+}
+
+#carouselExampleCaptions img{
+    height: 30rem;
+    object-fit: cover;
+}
+.botaoAcess{
+    background-color: #5F6F52;
+
+}

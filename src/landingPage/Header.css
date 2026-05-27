@@ -1,0 +1,35 @@
+        .navbar-custom {
+            background-color: #FCFAF5; /* Fundo creme */
+            border-bottom: 2px solid #D9D4C5 !important; /* Substitui a borda padrão do Bootstrap */
+        }
+
+        /* Estilo dos links do menu */
+        .navbar-custom .nav-link {
+            color: #000 !important; /* Cinza escuro */
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        /* Cor do link ao passar o mouse */
+        .navbar-custom .nav-link:hover {
+            color: #6b7c5a !important; /* Fica verde ao passar o mouse */
+        }
+
+        /* Estilo do botão de Cadastro/Login */
+        .btn-marca {
+            background-color: #6b7c5a;
+            color: #ffffff;
+            font-weight: 500;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-marca:hover {
+            background-color: #566448;
+            color: #ffffff;
+        }
+
+        /* Ajuste do tamanho da logo */
+        .logo-custom {
+            max-height: 55px;
+        }
