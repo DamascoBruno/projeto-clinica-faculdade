@@ -18,6 +18,9 @@
     /* NEUTROS */
     --branco: #ffffff;
 
+    /* PRETO */
+    --preto: #000;
+
     /* FONTES */
     --fonte-titulo: 'Playfair Display', serif;
     --fonte-texto: 'DM Sans', sans-serif;
@@ -34,18 +37,54 @@ body {
     display: flex;
     align-items: center;
 }
-p{
-font-family: var(--fonte-texto);
-font-size: 1.1rem;
-}
-#carouselExampleIndicators {
-    width: 50rem;
-    height: 30rem;
+
+p {
+    font-family: var(--fonte-texto);
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--marrom-textos);
+    text-transform: uppercase;
 }
 
-#carouselExampleCaptions img {
+.textos-2 {
+    font-family: var(--fonte-titulo);
+    font-size: 4.2rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--preto);
+}
+
+.textos-2 .destaque {
+    color: var(--verde-cta);
+    font-style: italic;
+}
+
+#carouselExampleIndicators {
+    width: 100%;
+    height: 30rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    margin-left: 1.5rem;
+}
+
+#carouselExampleIndicators img {
+    width: 100%;
     height: 30rem;
     object-fit: cover;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 1rem;
+    height: 1rem;
+    padding: 0;
+    border-radius: 50%;
+}
+
+.carousel-control-prev-icon,.carousel-control-next-icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100rem;
 }
 
 #botaoIntro {
@@ -64,5 +103,13 @@ font-size: 1.1rem;
 
     width: 20rem;
 
+    color: var(--branco);
+
+    margin-bottom: 2rem;
+}
+
+#botaoIntro:hover {
+    background-color: var(--verde-texto);
+    color: var(--branco);
     transition: 0.3s;
 }
