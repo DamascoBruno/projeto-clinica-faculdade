@@ -1,0 +1,121 @@
+body{
+    background:#FCFAF5;
+    color:#3E4A3F;
+    font-family: "liberation-serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+body, i {
+    color: #5F6F52;
+    font-family: "liberation-serif", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.hero-section{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+}
+
+/* Texto pequeno em cima */
+.small-title{
+    text-transform:uppercase;
+    letter-spacing:4px;
+    font-size:12px;
+    color:#A8A59E;
+    margin-bottom:30px;
+}
+
+/* Texto Principal Maior */
+h1{
+    font-family:'Playfair Display',serif;
+    font-size:72px;
+    line-height:1.12;
+    color:#4C574C;
+    margin-bottom:35px;
+}
+
+/* Subtitulo */
+.subtitle{
+    font-size:20px;
+    line-height:1.8;
+    color:#3E4A3F;
+    margin-bottom:45px;
+    max-width:720px;
+}
+
+/* Lista */
+.benefits{
+    list-style:none;
+    padding:0;
+}
+
+/* Itens da lista */
+.benefits li{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-bottom:26px;
+    font-size:18px;
+    color:#3E4A3F;
+}
+
+/* Checkbox */
+.icon-check{
+    width:34px;
+    height:34px;
+    min-width:34px;
+    border-radius:50%;
+    background:#E5E3DA;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#8A8A73;
+    font-size:18px;
+}
+
+/* Card Verde */
+.contact-card{
+    background:#697C58;
+    border-radius:32px;
+    padding:60px;
+    color:white;
+    box-shadow:0 14px 30px rgba(0,0,0,.10);
+}
+
+/* texto principal card */
+.contact-card h2{
+    font-family:'Playfair Display',serif;
+    font-size:52px;
+    line-height:1.2;
+    margin-bottom:30px;
+}
+
+/* paragrafo card */
+.contact-card p{
+    font-size:18px;
+    line-height:1.9;
+    color:#E7E7DF;
+    margin-bottom:40px;
+}
+
+/* Botão Contato */
+.btn-custom{
+    background:#F7F6F3;
+    color:#4D574D;
+    border:none;
+    border-radius:50px;
+    padding:16px 34px;
+    font-weight:500;
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    transition:.25s;
+}
+
+/* Animação botão */
+.btn-custom:hover{
+    background:whitesmoke;
+    transform:translateY(-2px);
+}
