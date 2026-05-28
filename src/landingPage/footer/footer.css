@@ -1,0 +1,80 @@
+:root {
+
+    /* FUNDOS */
+--fundo-primario: #fcfaf5;
+--fundo-secundario: #e9e5da;
+
+    /* VERDES */
+--texto-login: #afc496;
+--verde-medio: #919f88;
+--verde-cta: #5F6F52;
+--verde-texto: #3E4A3F;
+
+    /* MARROMS */
+--marrom-selecao-item: #9f8675;
+--marrom-textos: #6E5A4F;
+
+    /* NEUTROS */
+--branco: #ffffff;
+
+    /* FONTES */
+--fonte-titulo: 'Playfair Display', serif;
+--fonte-texto: 'DM Sans', sans-serif;
+}
+
+.footer-custom{
+    background-color: var(--verde-texto);
+    color: var(--fundo--primario);
+    font-family: var(--font-texto);
+}   
+
+.footer-logo{
+    max-height: 53px;
+    filter: brightness(0) invert(1);
+}
+
+.footer-text{
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--fundo-secundario);
+    max-width: 320px;
+}
+
+.footer-title{
+    font-family: var(--fundo--primario);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--texto-login);
+    margin-bottom: 1.25rem;
+}
+
+.footer-links li{
+    margin-bottom: 0.75rem;
+}
+
+.footer-links a{
+    color: var(--fundo-primario);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3 ease; 
+}
+
+.footer-links a:hover{
+    color: var(--texto-login);
+}
+
+.footer-divider {
+    border-color: var(--fundo-secundario) !important;
+    opacity: 0.2; /* Deixa a linha bem suave */
+}
+
+/* Rodapé de Copyright */
+.footer-bottom {
+    font-size: 0.75rem;
+    color: var(--verde-medio); /* #919f88 */
+}
+
+.footer-sublinks {
+    color: var(--verde-medio);
+}
