@@ -9,6 +9,105 @@
     <link rel="icon" href="img/Favicon.png" sizes="32x32">
 </head>
 <body>
-    <h1>Cadastro Paciente</h1>
+    <h1> Criar Conta </h1>
+
+    <h6> DADOS PESSOAIS </h6>
+    
+<div class="container">
+    
+
+    <form id="cadastro">
+        <div class="row">   
+            
+            <div class="col-4">
+            <label for="Nome" class="form-label"> Nome </label>
+            <input type="text" class="form-control" id="Nome" name="Nome" placeholder=" Digite seu nome">
+            </div>  
+
+
+            <div class="col-4">
+            <label for="Sobrenome" class="form-label"> Sobrenome </label>
+            <input type="text" class="form-control" id="Sobrenome" name="Sobrenome" placeholder="Insira seu Sobrenome">
+            </div>
+        </div>
+<p></p>
+
+
+
+        <div class="row">
+            <div class="col-4"> 
+            <label for="CPF" class="form-label"> CPF </label> 
+            <input type="number" class="form-control" id="CPF" name="CPF" placeholder="___.___.___-__">   
+            </div>
+
+            <div class="col-4">
+            <label for="Data" class="form-label"> Data de Nascimento </label>
+            <input type="date" class="form-control" id="Data" name="Data">
+            </div>
+        </div>
+<p></p>
+
+
+        <div class="row">
+            <div class="col-4">
+                <label for="Telefone" class="form-label"> Telefone </label>
+                <input type="number" class="form-control" id="Telefone" placeholder="(15) 98765-4321">
+            </div>
+            <div class="col-4">
+                <label for="Sexo" class="form-label"> Sexo </label>
+                <select class="form-select" id="Sexo">
+                <option selected aria-disabled> Selecione </option>
+                <option value="Masculino"> Masculino </option>
+                <option value="Feminino"> Feminino </option>
+                <option value="Prefiro não informar"> Prefiro não informar </option>
+                <option value="Outro"> Outro </option>
+                </select>
+            </div>
+        </div>
+<p></p>
+
+    <h6> ACESSO AO SISTEMA </h6>
+
+    <div class="row">
+        <div class="mb-1">
+            <label for="Email" class="form-label"> Email </label>
+            <input type="text" class="form-control" id="Email" name="Email" placeholder="seu@email.com">
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-4">
+            <label for="Senha" class="form-label"> Senha </label>
+            <input type="text" class="form-control" id="Senha" name="Senha" placeholder="Mínimo 8 caracteres">
+        </div>
+   
+        
+
+        <div class="col-4">
+            <label for="Confirmar_Senha" class="form-label"> Confirmar sua senha </label>
+            <input type="text" class="form-control" id="Confirmar_Senha" name="Confirmar_Senha" placeholder="Repita a senha">
+        </div>
+    </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-12">
+            <div class="checkbox-container"></div>
+            <input type="checkbox" id="aceite">
+            <label for="aceite"> Aceite os 
+                <a href="#"> Termos de Uso </a>
+                e a
+                <a href="#"> Política de Privacidade </a>
+                da Clínica Essência
+            </label>
+        </div>
+    </div>
+
+</div>
+
+    </form>
 </body>
 </html>
