@@ -1,0 +1,210 @@
+    /* ===========================
+       VARIÁVEIS GLOBAIS
+       Altere aqui para mudar cores
+       e fontes em todo o projeto
+       =========================== */
+    :root {
+      /* FUNDOS */
+      --fundo-primario: #fcfaf5;       /* branco quente — fundo dos cards */
+      --fundo-secundario: #e9e5da;     /* bege — fundo desta seção */
+
+      /* VERDES */
+      --texto-login: #afc496;          /* verde claro — bordas hover dos cards */
+      --verde-medio: #919f88;          /* verde médio — ícones, rótulos, bordas suaves */
+      --verde-cta: #5F6F52;            /* verde escuro — botão CTA hover */
+      --verde-texto: #3E4A3F;          /* verde muito escuro — títulos e textos */
+
+      /* MARRONS */
+      --marrom-selecao-item: #9f8675;  /* marrom — destaque itálico do título */
+      --marrom-textos: #6E5A4F;        /* marrom escuro — parágrafos e citação */
+
+      /* NEUTROS */
+      --branco: #ffffff;
+      --preto: #000;
+
+      /* FONTES */
+      --fonte-titulo: 'Playfair Display', serif;
+      --fonte-texto: 'DM Sans', sans-serif;
+    }
+
+    /* Base: 1rem = 10px */
+    html { font-size: 62.5%; }
+
+    body { margin: 0; padding: 0; }
+
+    /* ===========================
+       SEÇÃO PRINCIPAL
+       =========================== */
+    .secao-introducao {
+      background-color: var(--fundo-secundario);
+      padding: 8rem 2rem;
+      font-family: var(--fonte-texto);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    /* ===========================
+       COLUNA ESQUERDA — TEXTOS
+       =========================== */
+
+    /* Rótulo pequeno acima do título */
+    .rotulo-secao {
+      font-family: var(--fonte-texto);
+      font-size: 1.25rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      color: var(--verde-medio);
+      text-transform: uppercase;
+      margin-bottom: 1.6rem;
+    }
+
+    /* Título principal grande */
+    .titulo-secao {
+      font-family: var(--fonte-titulo);
+      font-size: 4.8rem;
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--verde-texto);
+      margin-bottom: 3rem;
+    }
+
+    /* Última linha do título em itálico com cor diferente */
+    .titulo-secao .destaque {
+      font-style: italic;
+      color: var(--verde-cta);
+    }
+
+    /* Parágrafos descritivos */
+    .paragrafo-descricao {
+      font-family: var(--fonte-texto);
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: var(--marrom-textos);
+      line-height: 1.75;
+      margin-bottom: 2rem;
+    }
+
+    /* Bloco de citação com borda esquerda */
+    .citacao-bloco {
+      border-left: 2px solid var(--verde-medio);
+      padding-left: 2rem;
+      margin-top: 2.4rem;
+    }
+
+    /* Texto dentro da citação */
+    .citacao-texto {
+      font-family: var(--fonte-titulo);
+      font-style: italic;
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: var(--marrom-textos);
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    /* ===========================
+       COLUNA DIREITA — CARDS
+       =========================== */
+
+    /* Rótulo acima da grade de cards */
+    .rotulo-cards {
+      font-family: var(--fonte-texto);
+      font-size: 1.25rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      color: var(--verde-medio);
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+
+    /* Grade 2 colunas dos cards */
+    .grade-condicoes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin-bottom: 1.6rem;
+    }
+
+    /* Card individual de condição */
+    .card-condicao {
+      background-color: var(--fundo-primario);
+      border: 1px solid transparent;
+      border-radius: 2.4rem;
+      padding: 1.8rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.4rem;
+      cursor: default;
+      transition: border-color 0.3s ease, transform 0.2s ease;
+    }
+
+    /* Hover: borda verde claro e leve elevação */
+    .card-condicao:hover {
+      border-color: var(--verde-texto);  
+      transform: translateY(-2px);
+    }
+
+    /* Ícone SVG do card */
+    .card-icone {
+      width: 3.6rem;
+      height: 3.6rem;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-icone svg {
+      width: 2.2rem;
+      height: 2.2rem;
+      stroke: var(--verde-medio);
+      fill: none;
+      stroke-width: 1.5;
+    }
+
+    /* Nome da condição */
+    .card-nome {
+      font-family: var(--fonte-texto);
+      font-size: 1.47rem;
+      font-weight: 400;
+      color: var(--verde-texto);
+      margin: 0;
+    }
+
+    /* ===========================
+       BOTÃO SECUNDÁRIO
+       Mesmo padrão do botao-cta
+       mas estilo outline/bordado
+       =========================== */
+    .botao-secundario {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 5rem;
+      padding: 0 3rem;
+      background-color: transparent;
+      color: var(--verde-texto);
+      font-family: var(--fonte-texto);
+      font-size: 1.47rem;
+      font-weight: 400;
+      border: 1px solid var(--verde-medio);
+      border-radius: 10rem;
+      text-decoration: none;
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .botao-secundario:hover {
+      background-color: var(--verde-cta);
+      color: var(--branco);
+      border-color: var(--verde-cta);
+    }
+
+    /* ===========================
+       RESPONSIVO — MOBILE
+       =========================== */
+    @media (max-width: 768px) {
+      .titulo-secao { font-size: 3.6rem; }
+      .grade-condicoes { grid-template-columns: 1fr; }
+      .coluna-direita { margin-top: 4rem; }
+    }

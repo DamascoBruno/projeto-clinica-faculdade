@@ -1,0 +1,245 @@
+    /* ===========================
+       VARIÁVEIS GLOBAIS
+       Altere aqui para mudar cores
+       e fontes em todo o projeto
+       =========================== */
+    :root {
+      /* FUNDOS */
+      --fundo-primario: #fcfaf5;       /* branco quente — fundo geral da página */
+      --fundo-secundario: #e9e5da;     /* bege — fundo desta seção */
+
+      /* VERDES */
+      --texto-login: #afc496;          /* verde claro — bordas e linha dos passos */
+      --verde-medio: #919f88;          /* verde médio — textos secundários */
+      --verde-cta: #5F6F52;            /* verde escuro — botões e destaque itálico */
+      --verde-texto: #3E4A3F;          /* verde muito escuro — títulos e textos principais */
+
+      /* MARRONS */
+      --marrom-selecao-item: #9f8675;  /* marrom claro — seleção/hover de itens */
+      --marrom-textos: #6E5A4F;        /* marrom escuro — textos de apoio */
+
+      /* NEUTROS */
+      --branco: #ffffff;
+      --preto: #000;
+
+      /* FONTES */
+      --fonte-titulo: 'Playfair Display', serif; /* para títulos e números decorativos */
+      --fonte-texto: 'DM Sans', sans-serif;      /* para parágrafos, botões e rótulos */
+    }
+
+    /* Base: 1rem = 10px para facilitar cálculos */
+    html { font-size: 62.5%; }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ===========================
+       SEÇÃO PRINCIPAL
+       =========================== */
+    .secao-como-funciona {
+      background-color: var(--fundo-secundario);
+      padding: 9rem 2rem;
+      font-family: var(--fonte-texto);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    /* ===========================
+       TEXTOS DO CABEÇALHO
+       =========================== */
+
+    /* Rótulo pequeno acima do título (ex: "COMO FUNCIONA") */
+    .rotulo-secao {
+      font-family: var(--fonte-texto);
+      font-size: 1.1rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      color: var(--verde-medio);
+      text-transform: uppercase;
+      margin-bottom: 1.6rem;
+    }
+
+    /* Título principal da seção */
+    .titulo-secao {
+      font-family: var(--fonte-titulo);
+      font-size: 4.2rem;
+      font-weight: 500;
+      line-height: 1.2;
+      color: var(--verde-texto);
+      margin-bottom: 0;
+    }
+
+    /* Palavra em itálico com destaque de cor no título */
+    .titulo-secao .destaque {
+      font-style: italic;
+      color: var(--verde-cta);
+    }
+
+    /* Subtítulo descritivo abaixo do título */
+    .subtitulo-secao {
+      font-family: var(--fonte-texto);
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: var(--verde-medio);
+      margin-top: 2rem;
+      margin-bottom: 5.6rem;
+    }
+
+    /* ===========================
+       LINHA DE PASSOS
+       Usa position relative/absolute
+       para a linha horizontal cruzar
+       os centros dos círculos
+       =========================== */
+
+    /* Container externo — necessário para posicionar a linha atrás dos círculos */
+    .passos-externo {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Linha horizontal que cruza os 4 círculos */
+    .passos-linha-horizontal {
+      position: absolute;
+      top: 3.5rem;   /* metade da altura do círculo (7rem / 2) — mantém centrado */
+      left: 20%;   /* começa aproximadamente no centro do 1º círculo */
+      right: 20%;  /* termina aproximadamente no centro do 4º círculo */
+      height: 1px;
+      background-color: var(--texto-login);
+      opacity: 0.7;
+      z-index: 0;    /* fica atrás dos círculos */
+    }
+
+    /* Container dos 4 itens de passo */
+    .passos-lista {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      position: relative;
+      z-index: 1;    /* fica na frente da linha */
+      width: 100%;
+    }
+
+    /* ===========================
+       ITEM DE PASSO INDIVIDUAL
+       =========================== */
+    .passo-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 20rem;
+      flex-shrink: 0;
+      padding: 0 1rem;
+    }
+
+    /* Círculo numerado de cada passo */
+    .passo-circulo {
+      width: 7rem;
+      height: 7rem;
+      border-radius: 50%;
+      background-color: var(--fundo-primario);  /* branco quente — fundo do círculo */
+      border: 1.5px solid var(--texto-login);    /* borda verde claro */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+      transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+
+    /* Efeito hover no círculo */
+    .passo-circulo:hover {
+      border-color: var(--verde-cta);
+      transform: scale(1.05);
+    }
+
+    /* Número dentro do círculo */
+    .passo-numero {
+      font-family: var(--fonte-titulo);
+      font-size: 2rem;
+      font-weight: 400;
+      color: var(--verde-texto);
+      letter-spacing: 0.02em;
+    }
+
+    /* Título de cada passo */
+    .passo-titulo {
+      font-family: var(--fonte-texto);
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--verde-texto);
+      margin-bottom: 1rem;
+    }
+
+    /* Descrição de cada passo */
+    .passo-descricao {
+      font-family: var(--fonte-texto);
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--verde-medio);
+      line-height: 1.65;
+      max-width: 16rem;
+    }
+
+    /* ===========================
+       BOTÃO CTA
+       Segue o mesmo padrão do
+       #botaoIntro da outra tela
+       =========================== */
+    .botao-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+
+      height: 5rem;
+      padding: 0 3.6rem;
+
+      background-color: var(--verde-cta);
+      color: var(--branco);
+
+      font-family: var(--fonte-texto);
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+
+      border-radius: 10rem;  /* totalmente arredondado (pill) */
+      border: none;
+      margin-top: 5.6rem;
+
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .botao-cta:hover {
+      background-color: var(--verde-texto);
+      color: var(--branco);
+      transform: translateY(-1px);
+    }
+
+    /* ===========================
+       RESPONSIVO — MOBILE
+       Abaixo de 768px: empilha os
+       passos e esconde a linha
+       =========================== */
+    @media (max-width: 768px) {
+      .passos-lista {
+        flex-direction: column;
+        align-items: center;
+        gap: 3.2rem;
+      }
+
+      /* Esconde a linha horizontal em telas pequenas */
+      .passos-linha-horizontal {
+        display: none;
+      }
+
+      .passo-item {
+        width: 100%;
+        max-width: 24rem;
+      }
+    }
