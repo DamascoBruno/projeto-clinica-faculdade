@@ -1,0 +1,219 @@
+        /* ===========================
+       VARIÁVEIS GLOBAIS
+       Altere aqui para mudar cores
+       e fontes em todo o projeto
+       =========================== */
+        :root {
+            /* FUNDOS */
+            --fundo-primario: #fcfaf5;
+            /* branco quente — fundo dos cards */
+            --fundo-secundario: #e9e5da;
+            /* bege — fundo da seção */
+
+            /* VERDES */
+            --texto-login: #afc496;
+            /* verde claro — bordas e detalhes suaves */
+            --verde-medio: #919f88;
+            /* verde médio — rótulos, estrelas, condição */
+            --verde-cta: #5F6F52;
+            /* verde escuro — botão CTA (não usado aqui) */
+            --verde-texto: #3E4A3F;
+            /* verde muito escuro — títulos e nomes */
+
+            /* MARRONS */
+            --marrom-selecao-item: #9f8675;
+            /* marrom — destaque itálico do título */
+            --marrom-textos: #6E5A4F;
+            /* marrom escuro — texto dos depoimentos */
+
+            /* NEUTROS */
+            --branco: #ffffff;
+            --preto: #000;
+
+            /* FONTES */
+            --fonte-titulo: 'Playfair Display', serif;
+            --fonte-texto: 'DM Sans', sans-serif;
+        }
+
+        /* Base: 1rem = 10px */
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ===========================
+       SEÇÃO PRINCIPAL
+       =========================== */
+        .secao-depoimentos {
+            background-color: var(--fundo-secundario);
+            padding: 9rem 2rem;
+            font-family: var(--fonte-texto);
+            min-height: 100vh;
+        }
+
+        /* ===========================
+       CABEÇALHO DA SEÇÃO
+       =========================== */
+
+        /* Rótulo pequeno acima do título */
+        .rotulo-secao {
+            font-family: var(--fonte-texto);
+            font-size: 1.25rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            color: var(--verde-medio);
+            text-transform: uppercase;
+            margin-bottom: 1.6rem;
+        }
+
+        /* Título principal */
+        .titulo-secao {
+            font-family: var(--fonte-titulo);
+            font-size: 4.8rem;
+            font-weight: 400;
+            line-height: 1.2;
+            color: var(--verde-texto);
+            margin-bottom: 0;
+        }
+
+        /* Segunda linha do título em itálico com cor diferente */
+        .titulo-secao .destaque {
+            font-style: italic;
+            color: var(--verde-cta);
+        }
+
+        /* Subtítulo descritivo */
+        .subtitulo-secao {
+            font-family: var(--fonte-texto);
+            font-size: 1.55rem;
+            font-weight: 300;
+            color: var(--verde-medio);
+            margin-top: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        /* ===========================
+       CARD DE DEPOIMENTO
+       =========================== */
+
+        /* Card com fundo branco quente e hover com sombra */
+        .card-depoimento {
+            background-color: var(--fundo-primario);
+            border: none;
+            border-radius: 1.6rem;
+            padding: 3rem 2.8rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Hover: leve elevação e sombra suave */
+        .card-depoimento:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(62, 74, 63, 0.08);
+        }
+
+        /* ===========================
+       ESTRELAS DE AVALIAÇÃO
+       =========================== */
+
+        /* Container das 5 estrelas */
+        .avaliacao-estrelas {
+            display: flex;
+            gap: 0.4rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Cada estrela SVG individual */
+        .estrela {
+            width: 1.4rem;
+            height: 1.4rem;
+            stroke: var(--verde-medio);
+            fill: none;
+            stroke-width: 1.5;
+            opacity: 0.6;
+        }
+
+        /* ===========================
+       TEXTO DO DEPOIMENTO
+       =========================== */
+
+        /* Citação em itálico com fonte serifada */
+        .depoimento-texto {
+            font-family: var(--fonte-texto);
+            font-style: italic;
+            font-size: 1.46rem;
+            font-weight: 400;
+            color: var(--verde-texto);
+            line-height: 1.75;
+            margin-bottom: 2.8rem;
+            flex-grow: 1;
+            /* empurra o autor para o rodapé do card */
+        }
+
+        /* ===========================
+       RODAPÉ DO CARD: AUTOR
+       =========================== */
+
+        /* Linha com avatar + nome + condição */
+        .depoimento-autor {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            margin-top: auto;
+        }
+
+        /* Círculo com inicial do nome do paciente */
+        .autor-avatar {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            background-color: var(--fundo-secundario);
+            /* bege — igual ao fundo da seção */
+            border: 1px solid var(--verde-medio);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-family: var(--fonte-titulo);
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: var(--verde-texto);
+        }
+
+        /* Nome do paciente */
+        .autor-nome {
+            font-family: var(--fonte-texto);
+            font-size: 1.35rem;
+            font-weight: 500;
+            color: var(--verde-texto);
+            margin: 0 0 0.2rem 0;
+        }
+
+        /* Condição tratada */
+        .autor-condicao {
+            font-family: var(--fonte-texto);
+            font-size: 1.19rem;
+            font-weight: 300;
+            color: var(--verde-medio);
+            margin: 0;
+        }
+
+        /* ===========================
+       RESPONSIVO — MOBILE
+       =========================== */
+        @media (max-width: 768px) {
+            .titulo-secao {
+                font-size: 3.4rem;
+            }
+
+            .card-depoimento {
+                margin-bottom: 2rem;
+            }
+        }

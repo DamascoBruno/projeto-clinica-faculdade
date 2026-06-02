@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa Terapêutico</title>
+
+    <!-- Fontes do Google: Playfair Display (títulos) e DM Sans (textos) -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+     <link rel="stylesheet" href="progrma_terapeutico.css">
+</head>
+
+<body>
+
+    <!-- ===========================
+     SEÇÃO: PROGRAMA TERAPÊUTICO
+     =========================== -->
+    <section class="secao-programa">
+        <div class="container text-center">
+
+            <!-- Título principal -->
+            <h2 class="titulo-secao">Programa de Acompanhamento Terapêutico</h2>
+
+            <!-- Subtítulo descritivo -->
+            <p class="subtitulo-secao">
+                Um programa estruturado com estratégias personalizadas para promover autonomia, equilíbrio emocional e
+                uma melhor qualidade de vida.
+            </p>
+
+            <!-- Grade de 3 cards -->
+            <div class="row g-4">
+
+                <!-- CARD 1 — Acompanhamento Integrativo Semanal -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-programa card-programa--item-1" style="background-image: url('./img_terapeutico/integrativo-semanal.webp')">
+
+                        <!-- Overlay de escurecimento gradual -->
+                        <div class="card-overlay"></div>
+
+                        <!-- Título visível no estado normal (rodapé) -->
+                        <div class="card-label-rodape">
+                            <p class="card-rotulo">Programa</p>
+                            <p class="card-titulo">Acompanhamento<br>Integrativo Semanal</p>
+                        </div>
+
+                        <!-- Conteúdo que aparece somente no hover -->
+                        <div class="card-conteudo-hover">
+                            <p class="hover-rotulo">Acompanhamento Integrativo</p>
+                            <p class="hover-descricao">
+                                Sessões individuais de práticas integrativas como meditação, acupuntura e fitoterapia
+                                para equilíbrio mente-corpo.
+                            </p>
+                            <a href="#" class="hover-botao">Ver mais informações</a>
+                        </div>
+
+                    </div>
+                </div><!-- fim card 1 -->
+
+                <!--  CARD 2 — Práticas Integrativas Individuais -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-programa card-programa--item-2" style="background-image: url('./img_terapeutico/praticas-integrativas.webp')">
+
+                        <div class="card-overlay"></div>
+
+                        <div class="card-label-rodape">
+                            <p class="card-rotulo">Programa</p>
+                            <p class="card-titulo">Práticas Integrativas<br>Individuais</p>
+                        </div>
+
+                        <div class="card-conteudo-hover">
+                            <p class="hover-rotulo">Práticas Integrativas</p>
+                            <p class="hover-descricao">
+                                Sessões individuais de práticas integrativas como meditação, acupuntura e fitoterapia
+                                para equilíbrio mente-corpo.
+                            </p>
+                            <a href="#" class="hover-botao">Ver mais informações</a>
+                        </div>
+
+                    </div>
+                </div><!-- fim card 2 -->
+
+                <!-- CARD 3 — Acompanhamento Cannabis Medicinal -->
+ 
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-programa card-programa--item-3" style="background-image: url('./img_terapeutico/acompanhamento-semana.webp')">
+
+                        <div class="card-overlay"></div>
+
+                        <div class="card-label-rodape">
+                            <p class="card-rotulo">Programa</p>
+                            <p class="card-titulo">Acompanhamento Semanal<br>Tratamento Cannabis Medicinal</p>
+                        </div>
+
+                        <div class="card-conteudo-hover">
+                            <p class="hover-rotulo">Cannabis Medicinal</p>
+                            <p class="hover-descricao">
+                                Monitoramento semanal do tratamento com cannabis medicinal, ajuste de dosagem e
+                                acompanhamento clínico contínuo.
+                            </p>
+                            <a href="#" class="hover-botao">Ver mais informações</a>
+                        </div>
+
+                    </div>
+                </div><!-- fim card 3 -->
+
+            </div><!-- fim row -->
+        </div><!-- fim container -->
+    </section><!-- fim secao-programa -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

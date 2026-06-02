@@ -80,7 +80,7 @@
       font-family: var(--fonte-texto);
       font-size: 1.6rem;
       font-weight: 300;
-      color: var(--marrom-textos);
+      color: var(--verde-texto);
       line-height: 1.75;
       margin-bottom: 2rem;
     }
@@ -94,7 +94,7 @@
 
     /* Texto dentro da citação */
     .citacao-texto {
-      font-family: var(--fonte-titulo);
+      font-family: var(--fonte-texto);
       font-style: italic;
       font-size: 1.6rem;
       font-weight: 400;

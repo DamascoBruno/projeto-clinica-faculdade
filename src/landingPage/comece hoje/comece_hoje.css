@@ -1,0 +1,200 @@
+/* ===========================
+   VARIÁVEIS GLOBAIS
+   =========================== */
+:root {
+  --fundo-primario: #fcfaf5;
+  --fundo-secundario: #e9e5da;
+
+  --texto-login: #afc496;
+  --verde-medio: #919f88;
+  --verde-cta: #5F6F52;
+  --verde-texto: #3E4A3F;
+
+  --marrom-selecao-item: #9f8675;
+  --marrom-textos: #6E5A4F;
+
+  --branco: #ffffff;
+  --preto: #000;
+
+  --fonte-titulo: 'Playfair Display', serif;
+  --fonte-texto: 'DM Sans', sans-serif;
+}
+
+html { font-size: 62.5%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--fonte-texto);
+}
+
+/* ===========================
+   SEÇÃO HERO
+   =========================== */
+.secao-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background-color: #5a6a4e;
+  background-image:
+    radial-gradient(ellipse 38% 38% at 98% 2%,  rgba(160,180,140,0.22) 0%, transparent 70%),
+    radial-gradient(ellipse 38% 38% at 2%  98%, rgba(160,180,140,0.18) 0%, transparent 70%);
+}
+
+/* ===========================
+   CONTEÚDO CENTRAL
+   =========================== */
+.hero-inner {
+  max-width: 76rem;
+  padding: 8rem 2rem;
+  animation: fadeUp 0.9s ease both;
+}
+
+/* Eyebrow */
+.rotulo-hero {
+  font-family: var(--fonte-texto);
+  font-size: 1.15rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 2rem;
+}
+
+/* Título */
+.titulo-hero {
+  font-family: var(--fonte-titulo);
+  font-size: clamp(3.6rem, 6vw, 5.8rem);
+  font-weight: 400;
+  line-height: 1.18;
+  color: var(--branco);
+  margin-bottom: 2.4rem;
+}
+
+.titulo-hero em {
+  font-style: italic;
+  color: rgba(255,255,255,0.72);
+}
+
+/* Subtítulo */
+.subtitulo-hero {
+  font-family: var(--fonte-texto);
+  font-size: 1.55rem;
+  font-weight: 300;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.7);
+  max-width: 48rem;
+  margin: 0 auto 4rem;
+}
+
+/* ===========================
+   BOTÕES
+   =========================== */
+.hero-ctas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 4.8rem;
+}
+
+.btn-hero-primario {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  background: var(--branco);
+  color: var(--verde-texto);
+  font-family: var(--fonte-texto);
+  font-size: 1.45rem;
+  font-weight: 500;
+  padding: 1.4rem 2.8rem;
+  border-radius: 10rem;
+  border: none;
+  text-decoration: none;
+  transition: background 0.22s, transform 0.18s, color 0.22s;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+.btn-hero-primario:hover {
+  background: var(--fundo-primario);
+  color: var(--verde-cta);
+  transform: translateY(-2px);
+}
+
+.btn-hero-secundario {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  background: transparent;
+  color: var(--branco);
+  font-family: var(--fonte-texto);
+  font-size: 1.45rem;
+  font-weight: 400;
+  padding: 1.4rem 2.8rem;
+  border-radius: 10rem;
+  border: 1.5px solid rgba(255,255,255,0.45);
+  text-decoration: none;
+  transition: border-color 0.22s, background 0.22s, transform 0.18s;
+}
+
+.btn-hero-secundario:hover {
+  border-color: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.08);
+  color: var(--branco);
+  transform: translateY(-2px);
+}
+
+.btn-icone {
+  width: 1.7rem;
+  height: 1.7rem;
+  opacity: 0.75;
+  flex-shrink: 0;
+}
+
+/* ===========================
+   BADGES DE CONFIANÇA
+   =========================== */
+.hero-badges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+  flex-wrap: wrap;
+}
+
+.badge-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-family: var(--fonte-texto);
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.6);
+}
+
+.badge-item svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+/* ===========================
+   ANIMAÇÃO DE ENTRADA
+   =========================== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(2.4rem); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===========================
+   RESPONSIVO — MOBILE
+   =========================== */
+@media (max-width: 768px) {
+  .titulo-hero { font-size: 3.6rem; }
+  .hero-badges { gap: 1.8rem; }
+}

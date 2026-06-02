@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depoimentos</title>
+
+    <!-- Fontes do Google: Playfair Display (títulos/citações) e DM Sans (textos) -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="depoimentos.css">
+
+</head>
+
+<body>
+
+    <!-- ===========================
+     SEÇÃO: DEPOIMENTOS
+     =========================== -->
+    <section class="secao-depoimentos">
+        <div class="container text-center">
+
+            <!-- Rótulo pequeno -->
+            <p class="rotulo-secao">Depoimentos</p>
+
+            <!-- Título com destaque itálico na segunda linha -->
+            <h2 class="titulo-secao">
+                Vidas que já foram<br>
+                <span class="destaque">transformadas</span>
+            </h2>
+
+            <!-- Subtítulo descritivo -->
+            <p class="subtitulo-secao">Histórias reais de pacientes que confiaram na MedPics.</p>
+
+            <!-- Grade de 3 cards — Bootstrap row com gap -->
+            <div class="row g-4 text-start">
+
+                <!-- ========================
+           CARD 1 — Vitória Gerevini
+           ======================== -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-depoimento">
+
+                        <!-- 5 estrelas outline (decorativas) -->
+                        <div class="avaliacao-estrelas" aria-label="5 de 5 estrelas">
+                            <img src="./svg/estrelas.svg" alt="5 estrelas">
+                        </div>
+
+                        <!-- Texto do depoimento em itálico -->
+                        <p class="depoimento-texto">
+                            "Conhecer a MedPics e o canabidiol mudou a minha vida. Sempre convivi com a ansiedade, mas
+                            após o início do tratamento, consegui enfrentar situações que antes causavam crises. Hoje
+                            sei o que é ter qualidade de vida. Eternamente grata!"
+                        </p>
+
+                        <!-- Informações do autor -->
+                        <div class="depoimento-autor">
+                            <div class="autor-avatar" aria-hidden="true">V</div>
+                            <div>
+                                <p class="autor-nome">Vitória Gerevini</p>
+                                <p class="autor-condicao">Paciente — Ansiedade</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div><!-- fim card 1 -->
+
+                <!-- ========================
+           CARD 2 — Carolina Teller
+           ======================== -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-depoimento">
+
+                        <div class="avaliacao-estrelas" aria-label="5 de 5 estrelas">
+                            <img src="./svg/estrelas.svg" alt="5 estrelas">
+                        </div>
+
+                        <p class="depoimento-texto">
+                            "Sofria de enxaquecas há 30 anos, com quedas de pressão e vômitos. Após iniciar o óleo de
+                            cannabis indicado pela Dra. Adriana, as crises foram diminuindo. Já faz 3 meses sem nem dor
+                            de cabeça. Outra vida! Indico a todos."
+                        </p>
+
+                        <div class="depoimento-autor">
+                            <div class="autor-avatar" aria-hidden="true">C</div>
+                            <div>
+                                <p class="autor-nome">Carolina Teller</p>
+                                <p class="autor-condicao">Paciente — Enxaqueca Crônica</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div><!-- fim card 2 -->
+
+                <!-- ========================
+           CARD 3 — Cíntia Caveden
+           ======================== -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-depoimento">
+
+                        <div class="avaliacao-estrelas" aria-label="5 de 5 estrelas">
+                            <img src="./svg/estrelas.svg" alt="5 estrelas">
+                        </div>
+
+                        <p class="depoimento-texto">
+                            "A Dra. Adriana é simplesmente maravilhosa, muito dedicada e faz tudo com amor. Minha mãe
+                            iniciou o tratamento para dor crônica e a melhora é visível — as dores diminuíram muito! Sou
+                            pura gratidão pela MedPics."
+                        </p>
+
+                        <div class="depoimento-autor">
+                            <div class="autor-avatar" aria-hidden="true">C</div>
+                            <div>
+                                <p class="autor-nome">Cíntia Caveden</p>
+                                <p class="autor-condicao">Filha de Paciente — Dor Crônica</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div><!-- fim card 3 -->
+
+            </div><!-- fim row -->
+        </div><!-- fim container -->
+    </section><!-- fim secao-depoimentos -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
