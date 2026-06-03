@@ -2,178 +2,146 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Criar Conta - MedPics</title>
 
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Fontes -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Seu CSS -->
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-    <div class="container-fluid">
+    <div class="container-fluid pagina-cadastro">
 
         <div class="row min-vh-100">
 
+            <!-- ================================================= -->
             <!-- PAINEL ESQUERDO -->
-            <div class="col-lg-3 bg-dark text-white d-flex flex-column">
+            <!-- ================================================= -->
 
-                <div class="p-5">
+            <div class="col-lg-3 painel-esquerdo">
 
-                    <h1 class="display-6 mb-5">
-                        MEDPICS
-                    </h1>
+                <!-- Imagem decorativa de fundo -->
+                <img src="/src/img/folha.svg" alt="folha" class="imagem-fundo">
 
-                    <div class="mt-5">
+                <!-- Logo separado fora do conteudo-painel -->
+                <div class="area-logo">
+                    <img src="/src/img/Medpics_logo_HP@4x copy.png" alt="MedPics Logo" class="logo-medpics">
+                </div>
 
-                        <h2 class="fw-bold mb-4">
+                <div class="conteudo-painel">
+
+                    <!-- Texto principal -->
+                    <div class="texto-painel">
+                        <h1>
                             Comece sua jornada de cuidado
-                        </h2>
-
-                        <p class="mb-5">
-                            Crie sua conta para acessar todos os nossos
-                            serviços e acompanhar seu progresso terapêutico.
+                        </h1>
+                        <p>
+                            Crie sua conta para acessar todos os nossos serviços e acompanhar seu progresso terapêutico.
                         </p>
+                    </div>
 
-                        <div class="mb-4">
-                            <i class="bi bi-check-circle-fill me-2"></i>
-                            Agendamento online rápido e fácil
+                    <!-- Benefícios -->
+                    <div class="lista-beneficios">
+
+                        <div class="beneficio">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDkiIGhlaWdodD0iNDkiIHZpZXdCb3g9IjAgMCA0OSA0OSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CjxlbGxpcHNlIGN4PSIyNC4yOTkyIiBjeT0iMjQuMjk5MiIgcng9IjI0LjI5OTIiIHJ5PSIyNC4yOTkyIiBmaWxsPSIjOTE5Rjg4Ii8+CjxyZWN0IHg9IjEyLjAxNTEiIHk9IjExLjQ4NyIgd2lkdGg9IjI0LjU2NzciIGhlaWdodD0iMjQuNTY3NyIgZmlsbD0idXJsKCNwYXR0ZXJuMF83ODNfNykiLz4KPGRlZnM+CjxwYXR0ZXJuIGlkPSJwYXR0ZXJuMF83ODNfNyIgcGF0dGVybkNvbnRlbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHdpZHRoPSIxIiBoZWlnaHQ9IjEiPgo8dXNlIHhsaW5rOmhyZWY9IiNpbWFnZTBfNzgzXzciIHRyYW5zZm9ybT0ic2NhbGUoMC4wMDc4MTI1KSIvPgo8L3BhdHRlcm4+CjxpbWFnZSBpZD0iaW1hZ2UwXzc4M183IiB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgeGxpbms6aHJlZj0iZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFJQUFBQUNBQ0FZQUFBRERQbUhMQUFBTWpVbEVRVlI0QWV5ZEJiQTBSeEhISHdRTFJmRENIWW9DZ3Fkd1NSV2VRSEFDSWJpN0JBaWhjQ3NJVGlqYzNVSUk3bEJJQ0JDQ2F4RUlVcmdGQ1U2UzMrL2V0MS91N2p0WkdkbmRtMWZkTnlzejNUMjkvN2U3TTlNemU5cXQ4cmZSSGlnQTJPakx2N1ZWQUZBQXNPRWUyUERxbHp0QUFjQ0dlMkREcTEvdUFBVUFHKzZCOFZYL2RGUnBYL2hnK0NENDl2RHU4QXhWTytVT1VIbGkyT2xwTVArNjhNdmdYOE1mZ2crRm53Ky9HLzROL0dKNEQzaUdDZ0JtM0RISW5jdGk5VmZoejhNUGhNOE56OU5aT2ZBdytEdndqZUdkVkFDdzB4V0QyL0MvL3FGWWZTeDhWYmdPWFlSTUg0WDNoeWRVQURCeHcrQit6b2ZGSDRFUGc1Yyszem0zaUx6bWIrYkVEZURTRTZnVEJzYmU4citNelRlRjI5SVpLUGh5ZURmUlFGcG9JQjY0RG5ZZUJYc3JKK2xFbDZiMGdRVUFlR0VnZEN2cy9DUjhEamdVN1ZjQUVNcVZjZVhjRXZFMjU4NUUyb25tQ3U5VkFERG5rUjd1M2dTYjNnV2ZIZzVOdXhjQWhIWnBXSGw3SSs1SStJeHdEUHBwQVVBTXQ0YVJlVTNFZkJCdTJzeWpTRzA2dmdDZ3RxK1NacndLMm16bm40VTBKcFU3UUV6dnRwUzlKK1UrQVo4ZGprM0hsVHRBYkJjM2szOXhzdHZVT3hkcGJEb1JCVWNVQU9DRm5wRHQrdzlqaTkyOEpOSEo3dUFUQ2dDaSs3bVdBdC95ZmR1L1RLM2NMVExORlRtWmZjY1J5bGdBanNoTmp1cTlIaU91RDZjaTN6RytyN0p5QjlBTGVmbVpxRDhBVGtrR2lrejBGUUJNM0pEdDUzNW9maHlja3Q2RHNvL0RFeW9BbUxnaHk4OCthRFdFaXlRWm5ZQW1nMGhJdHFrQVlOc1BxWC90NkxGL2Y3ZkVpaCtMUG1NR1NiYXBBR0RiRHlsL0hjczNhRE4yTDk5OG5UN0hnVmZETTFRQU1PT082RHRuUTRNWC8veWtLY2xPSDk4M2JQN042QzBBbUhGSDFCMkhjNDlBdytYaFpMUkQwUU5JZndqdlFnVUF1N2drMm9IWElIa1NpRW1ha2w2RnNyZkFDNmtBWUtGYmdoOThLaEx2QnFlbXI2SFErUUFraTZrQVlMRmZRaDY5SjhLZUJLY21tM3gzUU9tLzRhVlVBTERVTlVGT09Bdm5sVUVrTlJOeUV0a1BoSDhDcjZRQ2dKWHU2WFR5Q3BRK0hQYmxqeVFwUFJwdGppeVNyS1lDZ05YK2FYdjJnaFQwQWpnbmo4Mms1TXZtQyt0cUxBQ282Nm42K1p5QmExdi9RdldMQk12NVdTUTlDSzVOQlFDMVhWVXJvM1B6amQrL1VxM2NZVFA5R0hHM2cvOExiOVhsQW9DNm5xcVg3eFZrNnpKbmorS3Q2QytVMmcvK0k5eUlDZ0FhdVd0bDVpZHc5dDV3YXZvL0N1OEVUd0k4U0J0UkFVQWpkeTNOZkMvT1BCM09RWTlDcVhQK1NacFRBVUJ6bjgyWGNOS20zYTN6eDFQc3Z3NGxMdjFDMG80S0FOcjVyU3AxUFRiZUFhY2UxMGZsMXRIOHVDUU1TWHNxQUdqdnV5dFM5QU53NkJtN2lGeEx2eVRIYmVIL3dKMm9BS0NkKzV6QTRYUFg4ZjEyRXRxWCtoZEZid083OGhkSk55b0FhTzYvODFERW9NclVRUjJvbmRCOStUMEdYa2hORHhZQU5QT1l2WHhPMnJ4VXMyTEJjajhQU1V2SDlqblhtQW9BNnJ1c21yMVRkMG0yK3BMcjVmd1kyUTZCZzFJQlFEMTM2aWYvODNKRTlHamhqL2l4czhkT0h6YkRrUlVMSjIyOGtsNUsxVnh6bHlRNS9SV05yaEZrZ0FlYllha0FZTDAvRGVjeXFISjl6dkE1cXNDT0g0UVh2UzJ4QUdEYkQ4dCtIOHlKSE9GY3FKMlE0d3N1RXpQWmlmRlRBTERjcTNmazFHUUtOV2tPZWlkS253VkhwUUtBeGU2OUVZZmZCT2Z5ejlmUjdRQVRTVDFxbXl0WEJkdmFtNkxjMVZEeVh0ajFkRW1TMCsvUWVHdjRIM0IwS2dDWWRmSGwyTFdqSi9XOFBkUk95R2dlV3hzL24rd2wrQ2tBT05YSjl1Kzdja2FLQlpwTzFUcTc1ZFJ0UC93d2V6VGlYZ0hBdG5QdDEvZmlYMkI3Tjh1dnk3Y25uME5RQUxDMWRVNHV0NE03bHlUTlJVN2RmbmdPNWRNQU1LaEJJOTZISWNmdFlJYzhiUXI1Vmp5ZGw5T2pJSi8xeHUvbm1MRmJPZkJuYlBqYzkvblBabHFxTHVxRlVXdE0rWXRJN1hiMHYwRTJ3dFhua3JkSGd4Q2V6Zmtja3gxUUc1eXF3WjFyQkpkY1g2QnYrcjd4Lzc1K2tiQTVLd0RZMSszWEtGWkpkd0ZEbHhoeG52bGRWMlVjd0RudmRvWnkzVEN6clU0Yy9VWVhHN3FXRlFCWFI0Z3g1U1MxU0NEWVNlTGJxbUZSdFFyMUtKUHI4aGxNNlg5ZVRyTmNIczUxZ25MYXNDVUFqREJwWTRRZktuVCt1WStOSEhGeGJXeTJqRkcwT2VicXE3dGlZd21mV08za1RBWEFSVHNZNEszVUY4ZlBJTU5RS1pKZTA5T3d6bmNha216MFBUUTdkWHVYOVhvNG5wd0V3TEpKakgvQUdrZWpYa0M2Yml6YWp4djRLVE43MHNqZVMzb2tWdVgrci9zek5qaVA0RytrdmFCVkFQQVRwTS9BU3I5Wjh5ZlNkWFF4TW53UmRsRUVrbDZSQXlzN2wwZk5aSm5SUEViMTJNVE9aTUt1YWdYQS8zWTlQSFBFTnZJbFpvNHMzekZNMm5iMS9aZG5TWDdHR2JQTzNQSGxMN255S1lVSHMyMkhFMGwvU0FBY0g5Z2NwMGc3UzlZSVZ1VUhGdDlJbkhldnQxSENkeFdTYkdTcnlVZHBOZ09XS2ZZQ2hRWkFwY3RKaTM2VUlKZnpiYVhrSE5hdC9QQVZOb0xmRVpFWmhHSUNRQVB2ekkvUnRLbEJzQmQ2WGFYanpLUTV5WFY1bmNYamJKNmNkaXpWSFJzQUt2YkY1KzFzK0dnZ2lVNitzeGhEbjd2TDJ1WFpuTC8zcStnMTdxQkFBS3hkU3F5RC9LcW82OVhaOVJvYkJNN1ljZHdpNTVoK1ZXY2ppYjlVN2ZRMUZRQkhZVnpuV2FiSVdFZStqZHYxR1d2Wk5GZmgvaFJHMkZWTmtwWHNIWDFEVmd0cUtoY0Fka3JZazFlelNLZHNQZzlkUkNsMHZKMFgzWXN2Q0RvWkdLQ3duMzF6bmI0QW91S0xFQUJxTVFiQU5BWGJFMmJJYzZqSGdiZDdiL3ZlL2xQWXYwcUhLM1VaVG02bno2cDh2VGxYQWVEOVdKU3liOXFSdUxlaXMydnJ3QmM5WC9oODhVTmNWdm83MmdWM25WNVRzdmFES2dBWTdIRnNZcFAyUjUvUHljb0dkaHVSN3hLT3F0bmthMVF3VXViN0lQZTdjRlFLTFh6YStYN01JTFQ4ZGZMdVFnWS9ZOUttbTlaaDNaVGYyc1BVcGVSTG40KzFwUm42ZW1JYUFGNklmMll3MUlHYXBsL1BjajIremdza0JhcnJGNUR6R0hpUU5BMEFoMy85Z21XT2l0aG05ais2am01aitBeGhxNU0zZGg3WDZmRlJ0bTVBTGJZZHJlVlBBMEFoRGxnNEpkbnQxT3lYTFo2N1J1bDVPZStIRHczb1pETXJlZEY5NDdlN042c2hYWlRQQThCbVRJNTNnYW9PdHArTlFhajI1MU5IR1YyS2ZmNTRqbjBEWkkzbno2RTdtTTU1QUNqWVlWelRYUHg0RkMrSzNMR0paZk9SMDluSnppenZsdGtONldyQUlnQVkybVhIU2xmWlhjb2J1K2QvV0NYRENSd3ZxWFl5cDY3VzRZdHJaalBDcUY4RUFDVWJQK2N6enUxYzdDU1VSK3hRN2tMTVRsN1pzWnN0c2JQSEVUN1RwRWJFVXJZTUFIWm9PRmt4bHQ2NmN2MzBpVzNzM0pHOGxiMDJQMXN0eTE0SjZGdTZEQURhK1dSK0duK0FnREtoeWJEenJsM0dJV3dTakk1bWhwRFZHeG1yQUdBSTg2S1hzZDRZbjlBUVowRVoxSmxRWlJwVnF3Q2dCVWJUZnN1TkRlYkJkL2FzdW5ickFPQ3dwdE9vREc5YUpXZXM1M3dSdHFkUEVJeXlqdXNBWUtXL3lZOFJ2aVFiUjNaTWVmc2ZiY1hyQU1ESzIvZHVpTFhibThMT0o2ZzdQakZZbjlRRmdCVzBDWlJzOVNvVlptVGZlOXJPbWc1cWRteGhUUUJncStBQURQSzVTREphY2lLc25UMnUzakhhU2xZVmF3SUF5emo1TStmYXVkb1FrdzJMYytxMmcySXg5ZlJHZGxNQWFMaGR0TG5IQ3JRakJyc3l1Sk5iWThqdXBjdzJBUEMveERXQ2Z0dkxHclUzeWxXNUhZUnFMMkdBSmRzQXdHcDY4UVdCWUhCLzZPeENUYjdmaktVK3RhOUhXd0Nvd01mQW9XNE1uSTJJdmdWMUdNMElIM1dwVFYwQW9CTEhDajd0eGtEWldWRTN4M1pCUUxKNTFCVUFOZ21kN21WdjRkQzhaemUzTVgyOXREMlZNN3NDUUR2OXFORStiTGprS2NsZzZDRlk2dEx3Skp0TElRQ2c5NHlNdlJrYlE1a1daZHlqQWFhWXZOa1VDZ0I2MFZnNVZ4ek5NYmxFL1hYNWNES09jbXlmZWpXbWtBQlF1VDJGTnFkOHZycmZOM1lLdVQxOUc5ZmNXM1loUWdOQVBVNDE5M05yYnZlSmo4RVl3OHBUTElhQnFtRlFEQUJZYzc5OFlTU3YyMzFnSDAvN1lzaEd0dldwOTFLS0JRQVZPbWowV2pjeTh5L1E3M3FCem4xa3M5QzBCMklDUUQxTytzd1pTZXVvM3Q0WUlnaEkraytwTFl3TkFEdUtxclVDVTlmdDJ5aDBzY2hZQzJFaWZ2Z1VHd0I2eUJiQjNkbEkrVGc0R24zKzU0ODJtSlA2QmFFVUFOQlFwNXdiWXBWaVFxVUxNcnRpdVJGTTZpNjh3Z09wQUtBSnRyMk5MbmJSU0x1UFBSYWFYWlRaenFnVFF3c2VxN3lVQUtoOGFFK2NDenM1Qmw4ZDY1cmFGZTJnbEkrYTBzNXY0TTBjQU5BOFA1cHdMVGFlQTNjTnZud2pNdmFFajRRTE5mUkFMZ0JvcGl0b3V3YUFINk53NG1YVE1RU2JkbmJ1M0FOaDVYbVBFOXBRVGdCVTlocGVkaEE3QXNFSUl4ZW9FQndjV2tpKzRUdGoyTVVoUnpPY3U3Q21DUTcyQVFCVk5XMnlIY0tPSDZEYWcvVEtzSk5SbmtMcWtuRDI0L3Rkb211emZ4Z2M2MFVTMFp0RGZRTEF0TmZ0UURKU3h3ODhHcXJ0MkwyRFRFTUxPcG11VXkrMyt3cUFYanByakVZVkFJenhxamFvVXdGQUEyZU5NV3NCd0JpdmFvTTZGUUEwY05ZWXN4WUFaTDZxdWRXZkFnQUEvLzhkZWZXeEFBQUFCa2xFUVZRREFERjVpUkJTSTVRVEFBQUFBRWxGVGtTdVFtQ0MiLz4KPC9kZWZzPgo8L3N2Zz4K"
+                                alt="check">
+                            <span>Agendamento online rápido e fácil</span>
                         </div>
 
-                        <div class="mb-4">
-                            <i class="bi bi-shield-lock-fill me-2"></i>
-                            Seus dados protegidos e sigilosos
+                        <div class="beneficio">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDkiIGhlaWdodD0iNDkiIHZpZXdCb3g9IjAgMCA0OSA0OSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CjxjaXJjbGUgY3g9IjI0LjI5OTIiIGN5PSIyNC4yOTkyIiByPSIyNC4yOTkyIiBmaWxsPSIjOTE5Rjg4Ii8+CjxyZWN0IHg9IjExLjEwODQiIHk9IjExLjEwODIiIHdpZHRoPSIyNy43NzA1IiBoZWlnaHQ9IjI3Ljc3MDUiIGZpbGw9InVybCgjcGF0dGVybjBfNzgzXzkpIi8+CjxkZWZzPgo8cGF0dGVybiBpZD0icGF0dGVybjBfNzgzXzkiIHBhdHRlcm5Db250ZW50VW5pdHM9Im9iamVjdEJvdW5kaW5nQm94IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIj4KPHVzZSB4bGluazpocmVmPSIjaW1hZ2UwXzc4M185IiB0cmFuc2Zvcm09InNjYWxlKDAuMDA3ODEyNSkiLz4KPC9wYXR0ZXJuPgo8aW1hZ2UgaWQ9ImltYWdlMF83ODNfOSIgd2lkdGg9IjEyOCIgaGVpZ2h0PSIxMjgiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhsaW5rOmhyZWY9ImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBSUFBQUFDQUNBWUFBQUREUG1ITEFBQUxHMGxFUVZSNEFleWRDYWh0VlJuSFh5V1pJZG1FWmtWaWxCVVVKRFJBUlFOa0pVbUREWllhRVlVMllObzhVRmhCMktDVlZsQWFJZVZRbVpwV1lFUlMwV1FURlZqYVFLV05Ob0R6UFB4KytxNWNuL2VkdTlldzExNTc3Zlg0L21mdHMvZjNmZXYvL2RkMzd6M3ZuSDMydnV1V3R2L3RRSGxQQWdlQ3Q0Qmp3Q25ndStCQ2NQbFd1TzAraittanJ6SEdtZ08zTnEzRkJ0aVpwWG9SK0NLNEJQd1FuQXlPQm04R0x3ZFBBM3NCZllYYjd2T1lQdm9hWTZ3NXpHVk9mUWxyeDFwcGdGMVprdGVBYjREL2dLK0NnOEY5UUtxWncxem1OTGR6T0pkenB1YWVQSDd1RGVEaStOTjZFVXFlQUo0TDdnSEdNbk03aDNNNXAzUExZYXo1UnM4NzF3YllFV1hlQ3Y0RS9IdnRjemFMbW5NNnR4ems0dk9pQkhKTU5yY0d1QXRGKyt2WUYyMGZaYnVHbno0NXlFVk9jcE1qMU9aaGMycUFSeUhwTDRBdnlQWmdyTTNrSkRjNXlyVTJmaHZ5bVVzRCtIZjNKMVN3TjZqZDVDaFhPVmZMZFkzWUhCcmdIWkE5Rzl3THpNWGtLbWU1VjgyNTVnYndGZmRKcVBjaFVETlA2RzFvY3BhN05WakxoazVUNzVUazFCdzJtditCN1B3K09Bak0zYXpCV3F5cHVscHFiSUJkVU9sYzhIalFpbG1MTlZsYlZUWFYxZ0R5T1JXRkhnRksyUCtZUkRDTWJ0WmtiZFk0K21SREo2aUtES1EvRFBZRnVjMDNhL3lRNXlVa2ZqTFlFL2gzK2Y2TXdtMzNlVXdmZlkzaGNGYXpObXZNbWpRbFdVME44QW9LOFIwMWhpejJhN0s4Qnp3YVBBeVkyL2Z6ZjhUMlg4QzFZTTNjZHAvSDlOSFhHR1BOWWE0MTM5VFIzTmFhbWlkTGZDME44RVNxOGYxMWhtVHpIYm45eWZKWThFRndQb2cxWTgxaExuT2FPemJYK2pocnRlYjErNHBzYnp0SkRRMXdQMGlkQ1ZMZlMvOG5PVjRML0trMUg1dFp6WnptZGc3blNrbHVyZWF6OXBROHliRTFOSUMvWW5kUHJPVHJ4UHNpNjdPTU40Q3h6TnpPNFZ6T21US1BOVnQ3U283azJLa2I0S0ZVOEhxUVlrY1IvQUxnMlQwTVJjeTVuTk81VXlhMGRqVkl5WkVVTzNVRCtQZjE3cEVWWEUyY1ovQzhtL0VtVU5xYzA3bmxJSmVZK2ExZERXSmlzOFJNMlFDUG80SURRSXpkU05BTHdaZkExQ1lIdWNncGhvc2FxRVZNYkhMTWxBM2daK2l4bjUyL25jcS9CV294dWNncGhvOGFxRVZNYkhMTVZBM2dSNlZQajJSL0luRWZBN1dabk9RV3cwc3QxQ1FtTmlsbXFnWTRKSkwxVDRuenYyRU1WWnJjNUJoRExsYVRRWE50ejJtS0J0Z0pNczhFb1hZekFXOEF2bXZIVUtYSlRZNXlEU1dvSm1vVEdwZmtQMFVEN0FQamU0SlFPNDJBbjRQYVRZNXlEZVdwSm1vVEdwZmtQMFVEUEMrQzhmWEUrRjh1aGxtWVhPVWNTalpHbTlBNTd1QmZ1Z0djYjc4N01CajI1SGpjeHZoMGpyU2ptRnpsSEpwY2JkUW9OQzdhditoa3NQUURrTjBZUXkxR3pOQTVjdnZIY0ZZYk5jck5aYnY1U2pkQXpLKzRQOFArTjJCdUptZTVoL0tPMFNoMGp0djlTemVBSDZ2ZVB2bkFqYk1HK3RYb0ZzTTlScVBvMmtzM3dJTWltSDR0SXFhV2tCanVNUnB0dDk3TkRwUnVnTkF6WTYrZ2dCK0F1WnJjclNHRWY2aEdJYm52NUZ1eUFUenZMdlFFaUl0aEhQc2hDNkdUbTl5dElZU0lHcWxWU0V5MGI4a0c4QVNJVUtML0NBMm8wRCttaGhpdG9rb3YyUUF4Zjl0aXhJc1NZc1NnbUJwaXRJb3FvVGRBbEd4QlFiMEJ0c29WYzBrVnI4K3pOWHkyUTB3Tk1WcEZDVlR5TjhEZEloaDYybFZFV0ZVaE1UWEVhQlZWZE1rR2lDTFlnK0lVR0JyVkcyQ29VbzM2OVFab2RHR0hsdFViWUtoU2pmcjFCbWgwWVllVzFSdGdxRktOK3ZVR2FIUmhoNWJWRzJDb1VvMzY5UVpvYkdGRHkra05FS3BZWS82OUFScGIwTkJ5ZWdPRUt0YVlmMitBeGhZMHRKemVBS0dLTmViZldnUDQ1VXJQcHZGeTdVOWdyZnpDcFJkdmVDWGJod0cvc3VYMWV6L050cGQyOTdSdDRiYjdQS2FQdnNZWWF3NXptZFBjemtGNEd6YlhCdkNFaWFleUJJZUNqNE56d0YvQmxlQnY0TGZnUFBCdGNBYndlL3ZITVhvNUZxL2c3YlY1dkxtRFg4SVFicnZQWS9yb2E0eXg1akNYT2MzdEhNN2xuTTR0QjduSWlTbm1aYlUzd0FPUTB3c25lR3VXejdIdGFkWmUydlhmYkg4UGZBWWNBWjROSGdLODJnYkRxT1ljenVXY3ppMEh1Y2hKYm5LVXE1emxiZzJqRWpKNUxHcHZBSDhpdlV1WE4yZDZOVVY2S2RmN010WnFjcE9qWE9Vc2QydW9sZStXMmh1Z1d1RmFJVmF5QVlxZDU5YkE0aFRUcWtRRFdJeC9MOS9Zd01LVUtrR3QxRXp0UnAxenpBYnd2MDdId3Y3dndGZk12bkJpczlzQUJkUkt6ZFR1RS9pUGRoM0JNUnJncFJEK0EvQy9UbmF5RnozZ2FiY0lCZFR1Y09KK0JpNEF2aS9Ca005eU5vRC9QZm9BMUw0TXZOWStRN2VNQ25pQjZ0UEpkeVJRYTRaMHk5a0FiNExPZTBHMzhSUnc0ZDlIZXQ5L1lOaXlKZlVoWndPOExKVk1qeCtzZ0Jlb0h1eTh5akZYQSt6QkpONFppNkZiQVFYVVdzMlRwOHJWQUg1UWtreW1Kd2hTSUl2bXVSb2dpSGwzcmtlQjNnRDFyTVVrVEhvRFRDSjdQWk11dlFFdVlpa0V3ekp0YVEzZ3pTSGZ4VkkvQzNqSFVGOUpDN2ZkNXpGOU9GeTM1V0szcEFid3hJM0hJSnluZlhtV2p5ZHY4UFJXYzl0OUh0TkgzMXNQdFA2d2hBYndUQjEvdWwvSFlnNjVhS00rK2hwakxHSHQyaElhd0pNNy9la09YVVZqakEyTm01Vi82dzF3QXF2aEhiMFlvc3hZYzBRRnp5R281UWJ3ekYxUHpFeGRCM09ZS3pWUGxmRXROOERuVWR4YnZESWttVG5NbFpTazF1Q1dHK0NYR1VYUG1Tc2pyZlJVdlFHR2FWaE5Bd3lqTzl5cjFRYjRGeExFWEtPWHNBM05YT2JjOE9DY2Q3YmFBREczYk50c0hjZkl1ZG1jb3g5dnRRRWVqSEk1YjdwZ0xuT1N0aTFydFFFOGQyNnZqRXRsTG5ObVRKbWNLdWIydEhlYXROVUdzTkNjNytMbHpDVzNITWpTa0MwM2dGL1EzRG1EMHVZd1Y0WlU5YVZvdVFGMlFlNWpRS3FadzF5cGVhcU1iN2tCRlB3UUh2eGtqeUhLakRWSFZIRE9vTEZ5dGQ0QTZ2WkpIdDRKUXY1bTZtdU1zWVMyYTB0b0FMOWhleFJMZUJvWWF2b2FZK3pRbUZuNkxhRUIxaGJtS1dzYkE4WVEzd0hwNm5WWlVnUFV1d29UTXVzTk1LSDROVXpkRzZDR1ZaaVFRMitBQ2NXdlllcmVBRFdzd2dvT1l4L3FEVEMyd3BYbjd3MVErUUtOVGE4M3dOZ0tWNTYvTjBEbEN6UTJ2ZDRBWXl0Y2VmN2VBSlV2ME5qMGVnT01yWERsK1hzRFZMcEFwV2oxQmlpbGRLWHo5QWFvZEdGSzBWcFNBK3dZSUdxSWIwRGErbHlYMUFEM1JuNHZ3ODZ3MHZUUmQ2VlRLd2VYMUFDdTJYTjgyQVJEZkRaSk1aL0RTMnNBei9QYmZjWHllRXlmRlM1dEhWcGFBM2hYcjNOWndvM3V3T0UraittRHl6SnNhUTNncWo2U2h4OERGL3Nqak1KdDkzbU1YZE5aNlptWDJBQnF2QU1QendCdjJ3cTMzY2ZUWmRsU0cyQlpxN3lpMnQ0QUs4Ulp3cUZjRGREc1pkUXFib0lzbXVkcWdOOGgxTzlCdHpJS3FMV2FKOCtXcXdFa2NvWVBIVVVVeUtaMXpnWjRQNldmQXJxTnE0QWFxM1dXV1hJMndEVXdPZ2g0dS9UTEdMc0ZLRERBVlUzVlZvM1Zla0RJNWk0NUcyQnROdDlZMlkwbis0T3ZnS3RBdHpnRjFFNE4xVkpOMVRZdTAzYWl4bWdBcDdKRHoyVGpBTEFyT0JDY0RhNEQzVllyb0VacXBXWnFwNFpxcWFhckl5T09qdFVBNjZsY3laTlR3Zk9CQmIySzBjdXczOERZN1RZRjFFSk4xRWFOMUVyTjFPNDJqNUVlU3pUQWV1cVg4dVJFNEVldWZ2TG0xYmUrd1BORjNhZUhlalZydG5ZMVVBczFVUnMxOG5nUmxHNkE5VVg5bHlkZWh0MXI4TzNKdGlkaUhNeDRQTGdBdEdiV1pHM1dhSzNXYk8xcW9CYVQxRHRsQTJ4YjhNWHNPQmtjQ3J3dHFpOTZYc3oyY2VCWHdGK1RETE13dWNwWjd0WmdMZFprYmRab3JWVVVVbE1EYkN2SUpldzRIUndPOWdZN2dZZURmY0ZoNEZqd1RYQWg4SVVUUTFGelR1ZVdnMXprSkRjNXlsWE9jcmNHYXlsS2J1aGtOVGZBdGpYNFUvVkhkcDREUGdXT0FQc0JQOE5YY0grbDdzTnpyKzEzSk9QUndOdS9uY1I0RnZnT09BK2NEN3haNVA4WlhVVGh0dnM4cG8rK3hoaHJEbk9aMDl6TzRWek82ZHh5a0l1YzVDWkh1WkorYzV2YTR4WUFBQUQvLzAvSnNia0FBQUFHU1VSQlZBTUFFcGFEMENPUktXUUFBQUFBU1VWT1JLNUNZSUk9Ii8+CjwvZGVmcz4KPC9zdmc+Cg=="
+                                alt="cadeado">
+                            <span>Seus dados protegidos e sigilosos</span>
                         </div>
 
-                        <div class="mb-5">
-                            <i class="bi bi-phone-fill me-2"></i>
-                            Notificações e lembretes automáticos
+                        <div class="beneficio">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDkiIGhlaWdodD0iNDkiIHZpZXdCb3g9IjAgMCA0OSA0OSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CjxlbGxpcHNlIGN4PSIyNC4yOTkyIiBjeT0iMjQuMjk5MiIgcng9IjI0LjI5OTIiIHJ5PSIyNC4yOTkyIiBmaWxsPSIjOTE5Rjg4Ii8+CjxyZWN0IHg9IjguMzMxMDUiIHk9IjguMzMxMTgiIHdpZHRoPSIzMS45MzYxIiBoZWlnaHQ9IjMxLjkzNjEiIGZpbGw9InVybCgjcGF0dGVybjBfNzgzXzEwKSIvPgo8ZGVmcz4KPHBhdHRlcm4gaWQ9InBhdHRlcm4wXzc4M18xMCIgcGF0dGVybkNvbnRlbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHdpZHRoPSIxIiBoZWlnaHQ9IjEiPgo8dXNlIHhsaW5rOmhyZWY9IiNpbWFnZTBfNzgzXzEwIiB0cmFuc2Zvcm09InNjYWxlKDAuMDA3ODEyNSkiLz4KPC9wYXR0ZXJuPgo8aW1hZ2UgaWQ9ImltYWdlMF83ODNfMTAiIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bGluazpocmVmPSJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUlBQUFBQ0FDQVlBQUFERFBtSExBQUFHcTBsRVFWUjRBZXlhUzZnY1JSU0dKNXFBMGFBWUgvR0JpaUlHWFloRTR3TkVGRlFRRVUwMkxueUFtOFFIb2lJS2lrUVRpYWhJbEFTQ2JrUlFjS1BSNEVKd29lQkdpUmlOb2dFZm9QZ01QbENJajVoRS9jNWNodVFPdDJlNjcxU2ZxcTc2TCtmdm11bXVyblBPZi82cDZhcTVCL1RTL0R1WXNLNEJ6NEl0NER1d0IvelhJZnhFck52QUpyQUNIQWVTczlRRU1BZUdiZ2M3d0N2Z0pyQVVHSGtIMG5iSmppVFlNOEV5OEF6NEZtd0VoNEJrTENVQm5BWXJiNFAxWUFISXpVemN0NURVUitBaWtJU2xJQUNMNFY3WXNPbnlRdHJjN1JRU2ZBczhDUTRDVWMzSWp4b0F6dGVCeDBCME1vakJ5NHozTzNGbXVkUEVNd3NrbnZkZWJ5WE83d0NsbW4wbFhCb3orWmdDT0lIRWJScWtLZHBzcFhOb0xBWmlDbUF0U2M4SHBadDlFSjd5Sm1IZ0w1WUFMT25yQjBFRWFsOWduTFBBRGNDV2tUUjkyOHp4REdCUDRVMWd5N2dIdWMvRGJMbHJNWHI0bXVZamxnQ1dFNFVWZ3lhSS9jNG9Od05iU1pnUU52RGF6RGFQYnVYRmR0RFVmdUdHTldBcjhERGJML0R3TTgxSExBSFlMdCswUUNaOHM0djdkNE9CN1J5ODZGQjdWWXhZWXdsZ2NlQmtqMmE4UjRGTjI1ZlEzZ1hNNW5LdzNiZlRhWnZhRWR5d0Npd0JIbmFxaDVOaEh6RUVZRVZaTkJ4SWdQZFdkUHZ1ZjVPeFRnSUR1NW9YbjRLbXZ5UDh6RDJyZ1pjdHhORTg0R294QkdDSnR1VzNyWEU5aW1MUFJJZDdPTnJmUnd6Q1l2amNQK2VVWDVzSVhPTlRNVnpwanU5c09BSUpZSmlSd3Q1TEFJVVZmRGhkQ1dDWWtjTGVweVlBVzhiWmcxRE9PRFlsamFVbWdKUzRpUkdMN1ZXNCtwVUFYT2xPejVrRWtGNU5YQ09TQUZ6cGp1ZXN5ck1FVU1WTUllY2xnRUlLWFpXbUJGREZUSnp6V2dYRTRiMWNyNW9CeXExOVAzTUpvRTlEdVFjSm9OemE5ek9YQVBvMDVIc1lsNWtFTUk0aDMrdGFCZmp5TFcrYUFRclhnQVFnQVJUT1FPSHBhd2FRQUFwbm9QRDBOUU9rSllCZ3k4QzZhVWtBZFpuS3RKOEVrR2xoNjZZbEFkUmxLdE4rRWtDbWhhMmJsZ1JRbDZsTSswa0FhUlZXcTRDMDZwRi9OSm9CTXF0eDAzUWtnS2FNWmRaZkFzaXNvRTNUa1FDYU1wWlpmd2tncllKcUZaQldQZktQUmpOQS9qVWVtYUVFTUpLZS9DOUtBSm5VZUxacFNBQ3paUzZUK3lTQVRBbzUyelFrZ05reTE4NTlXZ2EydzZ0R3JXSkFNMEFWTTRXY2x3QUtLWFJWbWhKQUZUT0ZuSmNBT2w3b1NjT1hBQ1psTU96OVdnV0U1Vk9qaldOQU04QTRoaksvTGdGa1h1Qng2VWtBNHhqSy9Mb0VrSG1CeDZVbkFZeGp5UGU2VmdHK2ZIZlhXNmpJTlFPRVlyS2o0MGdBSFMxY3FMQWxnRkJNZG5RY0NhQ2poUXNWdGdRUWlzbU9qaU1CcEZVNExRUFRxa2YrMFdnRzZGaU5RNGNyQVlSbXRHUGpTUUFkSzFqb2NDV0EwSXgyYkR3SklLMkNhUldRVmozeWowWXpRUDQxSHBtaEJEQ1Nudnd2U2dBZHFYRmJZVW9BYlRIYmtYRWxnTFFLcFZWQVd2WElQeHJOQVBuWGVHU0dFc0JJZXZLL0tBSGtYK09SR1VvQUkrbkovNklFa0hpTjJ3NVBBbWliNFdiamF4bllqQy8xbnBRQnpRQ1RNdGp4K3lXQWpoZHcwdkFsZ0VrWjdQajlFa0RIQ3pocCtCTEFwQXlHdlYrcmdMQjhkbmMwcjhnMUEzZ3huYWdmQ1NEUnduaUZKUUY0TVoyb0h3a2cwY0o0aFpXYUFCYVJ1RDBKNTR3ZnlMSEtMTytxYTYyY1QwMEFyU1NwUWFzWmtBQ3F1U25paWdTUVdKbTl3eWxSQUxzZ2VSMVlCazRHNTRIYndBZWdPQ3ROQUI5UzRiUEIzZUJWOEJYWUFqYUNjOEZEd1AxQkRKL1JMSVlBL28yVTdXLzR2Uko4QW1heVBaeGNEVGFBV09iT1RRd0IvQXE3N29uaTB6NzEzOU9Pcy92bzhEWHd0cDA0L0FlNFdnd0IyQ2R0aDJ1V1U4NDJUVFZqajMvUzQzWGdiVDk2T3pSL01RUmdmait6Z3lPK3hKZDlCZERVc3ZkcjlRcmI2Zk93dzlVYkxaWUFYcXNYWHJCZVRhZldwdjFEQk9yTlNUL21XQUt3Si9CK0FFNkh4ZmhaQU9yYU9YVTdCdXEzbDNFMkEzZUxKUUNia2w5eXpOYnl2S0ttdjNuMHV4eDQyaE00cS9PQVNyZXdac1NFSGJIK2FQYTB2YnQrOTRsN3JtZUVoV0NjUFVBSG16Rm9YT3hqdkt3Q1VTeW1BTDRnWXlPYnhzV093Y3ZMNEhoUVpTdTVjRC93TXZzQTNJaXpHTThjdU8zMVlnckFBbmljdzNQQXl5N0drVzBFM1VON1BwZ1BUZ1RMd1J2Z2FUQVhlTmthSE5udUpFMGNpeTBBeTNvRmg0ZUI3US9RdEc2SDRjR0U5dzd0SDhBMmZXeG11SXpYWHZZM2preUVqOUJHdFJRRVlOT2dmUWZhWHZ3Mlp6Ym1PUHN6ZCs5eFdBTHN3Uy9HamlpdTkxa0tBaGhFWTcvR0xlV043Y2RIKzA3RWYxdG12MExhTTg4Rk9OZ09rckNVQkdDRTJHeGd2OGpadjRaZHg0a1h3VlpnVzhkVnY5TForV0hZSjJzbTdHV3NZZGhYenpBc2pwbGd3aHlHRlhZWWYrSG5HL0F1ZUI1Y0M0NENhNEg1cDVteTJNZi9BUUFBLy8vR2djb0VBQUFBQmtsRVFWUURBSThVSzdwRnMyRlVBQUFBQUVsRlRrU3VRbUNDIi8+CjwvZGVmcz4KPC9zdmc+Cg=="
+                                alt="celular">
+                            <span>Notificações e lembretes automáticos</span>
                         </div>
 
                     </div>
 
-                </div>
+                </div><!-- fim conteudo-painel -->
 
-                <div class="mt-auto text-center p-3">
-
-                    <p class="mb-0">
-                        A medicina humanizada e a tecnologia
-                        a favor do bem-estar.
-                    </p>
-
-                    <small class="text-secondary">
-                        Cadastro gratuito — Sem mensalidade
-                    </small>
-
+                <!-- Rodapé -->
+                <div class="rodape-painel">
+                    <p class="rodape-frase">A medicina humanizada e a tecnologia a favor do bem-estar.</p>
+                    <p class="rodape-sub">Cadastro gratuito — Sem mensalidade</p>
                 </div>
 
             </div>
 
+            <!-- ================================================= -->
             <!-- FORMULÁRIO -->
-            <div class="col-lg-9">
+            <!-- ================================================= -->
 
-                <div class="container py-4 px-lg-5">
+            <div class="col-lg-9 painel-formulario">
 
-                    <h1 class="fw-bold">
+                <div class="container-formulario">
+
+                    <h2 class="titulo-formulario">
                         Criar conta
-                    </h1>
+                    </h2>
 
-                    <p class="text-muted">
+                    <p class="subtitulo-formulario">
                         Preencha seus dados para começar
                     </p>
 
                     <form>
 
-                        <!-- DADOS PESSOAIS -->
-                        <div class="mt-4">
+                        <!-- Dados Pessoais -->
+                        <div class="secao-formulario">
 
-                            <h6 class="text-uppercase text-muted border-bottom pb-2">
-                                Dados Pessoais
-                            </h6>
-
-                            <div class="row mt-3">
-
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label">
-                                        Nome
-                                    </label>
-
-                                    <input type="text"
-                                        class="form-control"
-                                        placeholder="Nome">
-                                </div>
-
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label">
-                                        Sobrenome
-                                    </label>
-
-                                    <input type="text"
-                                        class="form-control"
-                                        placeholder="Sobrenome">
-                                </div>
-
-                            </div>
+                            <h3>Dados Pessoais</h3>
 
                             <div class="row">
 
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label">
-                                        CPF
-                                    </label>
-
-                                    <input type="text"
-                                        class="form-control"
-                                        placeholder="CPF">
+                                <div class="col-md-6 mb-4">
+                                    <label>Nome</label>
+                                    <input type="text" class="form-control" placeholder="Nome">
                                 </div>
 
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label">
-                                        Data de Nascimento
-                                    </label>
-
-                                    <input type="date"
-                                        class="form-control">
+                                <div class="col-md-6 mb-4">
+                                    <label>Sobrenome</label>
+                                    <input type="text" class="form-control" placeholder="Sobrenome">
                                 </div>
 
-                            </div>
-
-                            <div class="row">
-
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label">
-                                        Telefone
-                                    </label>
-
-                                    <input type="tel"
-                                        class="form-control"
-                                        placeholder="(11) 99999-9999">
+                                <div class="col-md-6 mb-4">
+                                    <label>CPF</label>
+                                    <input type="text" class="form-control" placeholder="CPF">
                                 </div>
 
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label">
-                                        Sexo Biológico
-                                    </label>
+                                <div class="col-md-6 mb-4">
+                                    <label>Data de Nascimento</label>
+                                    <input type="date" class="form-control" placeholder="dd/mm/aaaa">
+                                </div>
 
+                                <div class="col-md-6 mb-4">
+                                    <label>Telefone</label>
+                                    <input type="text" class="form-control" placeholder="(11) 99999-9999">
+                                </div>
+
+                                <div class="col-md-6 mb-4">
+                                    <label>Sexo Biológico</label>
                                     <select class="form-select">
-                                        <option selected>
-                                            Selecione
-                                        </option>
-
-                                        <option>
-                                            Masculino
-                                        </option>
-
-                                        <option>
-                                            Feminino
-                                        </option>
-
-                                        <option>
-                                            Outro
-                                        </option>
+                                        <option value="" disabled selected>Selecione</option>
+                                        <option value="masculino">Masculino</option>
+                                        <option value="feminino">Feminino</option>
                                     </select>
                                 </div>
 
@@ -181,102 +149,55 @@
 
                         </div>
 
-                        <!-- ACESSO AO SISTEMA -->
-                        <div class="mt-4">
+                        <!-- Acesso -->
+                        <div class="secao-formulario">
 
-                            <h6 class="text-uppercase text-muted border-bottom pb-2">
-                                Acesso ao Sistema
-                            </h6>
+                            <h3>Acesso ao Sistema</h3>
 
-                            <div class="mt-3 mb-3">
-
-                                <label class="form-label">
-                                    Email
-                                </label>
-
-                                <input type="email"
-                                    class="form-control"
-                                    placeholder="seu@email.com">
-
+                            <div class="mb-4">
+                                <label>Email</label>
+                                <input type="email" class="form-control" placeholder="seu@email.com">
                             </div>
 
                             <div class="row">
 
-                                <div class="col-md-6 mb-3">
-
-                                    <label class="form-label">
-                                        Senha
-                                    </label>
-
-                                    <input type="password"
-                                        class="form-control"
-                                        placeholder="Mínimo 8 caracteres">
-
+                                <div class="col-md-6 mb-4">
+                                    <label>Senha</label>
+                                    <input type="password" class="form-control" placeholder="Mínimo 8 caracteres">
                                 </div>
 
-                                <div class="col-md-6 mb-3">
-
-                                    <label class="form-label">
-                                        Confirmar senha
-                                    </label>
-
-                                    <input type="password"
-                                        class="form-control"
-                                        placeholder="Repita a senha">
-
+                                <div class="col-md-6 mb-4">
+                                    <label>Confirmar senha</label>
+                                    <input type="password" class="form-control" placeholder="Repita a senha">
                                 </div>
 
                             </div>
 
                         </div>
 
-                        <!-- TERMOS -->
+                        <!-- Termos -->
                         <div class="form-check mb-4">
-
-                            <input class="form-check-input"
-                                type="checkbox"
-                                id="termos">
-
-                            <label class="form-check-label"
-                                for="termos">
-
-                                Aceito os
-                                <a href="#">
-                                    Termos de Uso
-                                </a>
-                                e a
-                                <a href="#">
-                                    Política de Privacidade
-                                </a>
-                                da Clínica MedPics
-
+                            <input class="form-check-input" type="checkbox" id="termos">
+                            <label class="form-check-label" for="termos">
+                                Aceito os <a href="#" class="link-termos">Termos de Uso</a> e a <a href="#"
+                                    class="link-termos">Política de Privacidade</a> da Clínica MedPics
                             </label>
-
                         </div>
 
-                        <!-- BOTÃO -->
-                        <div class="d-grid">
+                        <!-- Botão -->
+                        <button type="submit" class="btn botao-cadastro">
+                            Criar minha conta
+                        </button>
 
-                            <button type="submit"
-                                class="btn btn-success btn-lg">
-
-                                Criar minha conta
-
-                            </button>
-
+                        <!-- Já tem conta (acima do botão) -->
+                        <div class="login-link mb-3">
+                            Já tenho conta. <a href="#">Fazer login</a>
                         </div>
 
-                        <div class="text-center mt-3">
-
-                            <span class="text-muted">
-                                Já tem conta?
-                            </span>
-
-                            <a href="#">
-                                Faça login
-                            </a>
-
-                        </div>
+                        <!-- Já tem conta (abaixo do botão — versão alternativa comentada) -->
+                        <!-- <div class="login-link mt-3">
+                            Já tem conta? <a href="#">Faça login</a>
+                        </div> -->
 
                     </form>
 
@@ -287,8 +208,6 @@
         </div>
 
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
