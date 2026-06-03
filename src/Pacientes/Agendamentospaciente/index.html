@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamentos</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container-fluid">
+
+    <div class="row min-vh-100">
+
+        <!-- MENU LATERAL -->
+        <aside class="col-md-2 border-end d-flex flex-column">
+
+            <div class="p-3">
+
+                <div class="mb-5">
+                    <h6 class="mb-0">Ana Paula Ferreira</h6>
+                    <small>Paciente - Plano 03</small>
+                </div>
+
+                <h6 class="text-uppercase">Minha Saúde</h6>
+
+                <div class="list-group mb-4">
+
+                    <a href="#" class="list-group-item list-group-item-action">
+                        Início
+                    </a>
+
+                    <a href="#" class="list-group-item list-group-item-action active">
+                        Agendamentos
+                    </a>
+
+                    <a href="#" class="list-group-item list-group-item-action">
+                        Meu Tratamento
+                    </a>
+
+                    <a href="#" class="list-group-item list-group-item-action">
+                        Prescrições
+                    </a>
+
+                </div>
+
+                <h6 class="text-uppercase">Integrativo</h6>
+
+                <div class="list-group mb-4">
+
+                    <a href="#" class="list-group-item list-group-item-action">
+                        Práticas Integrativas
+                    </a>
+
+                    <a href="#" class="list-group-item list-group-item-action">
+                        Minha Evolução
+                    </a>
+
+                </div>
+
+                <h6 class="text-uppercase">Comunicação</h6>
+
+                <div class="list-group">
+
+                    <a href="#" class="list-group-item list-group-item-action">
+                        Material Educativo
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="mt-auto p-3">
+                <button class="btn btn-outline-secondary w-100">
+                    Sair da Conta
+                </button>
+            </div>
+
+        </aside>
+
+        <!-- CONTEÚDO -->
+        <main class="col-md-10 p-4">
+
+            <!-- TOPO -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+
+                <div>
+                    <h1>Agendamentos</h1>
+                    <p class="text-muted">
+                        Gerencie suas consultas e práticas
+                    </p>
+                </div>
+
+                <button class="btn btn-success">
+                    + Agendar Consulta
+                </button>
+
+            </div>
+
+            <div class="row g-4">
+
+                <!-- ESQUERDA -->
+                <div class="col-lg-9">
+
+                    <!-- PRÓXIMAS CONSULTAS -->
+                    <div class="card mb-4">
+
+                        <div class="card-body">
+
+                            <h5 class="mb-4">
+                                Próximas Consultas
+                            </h5>
+
+                            <div class="card mb-3">
+                                <div class="card-body">
+
+                                    <div class="row align-items-center">
+
+                                        <div class="col-md-6">
+
+                                            <h6>
+                                                Consulta de Retorno
+                                            </h6>
+
+                                            <small class="text-muted">
+                                                Dra. Maria Adriana • Cannabis Medicinal
+                                            </small>
+
+                                        </div>
+
+                                        <div class="col-md-4 text-md-end">
+
+                                            <strong>
+                                                12 de Maio, 2026
+                                            </strong>
+
+                                            <br>
+
+                                            <small>
+                                                14:00 - 15:00
+                                            </small>
+
+                                        </div>
+
+                                        <div class="col-md-2 text-end">
+
+                                            <button class="btn btn-outline-success btn-sm">
+                                                Remarcar
+                                            </button>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="card">
+
+                                <div class="card-body">
+
+                                    <div class="row align-items-center">
+
+                                        <div class="col-md-6">
+
+                                            <h6>
+                                                Sessão Integrativa
+                                            </h6>
+
+                                            <small class="text-muted">
+                                                Clara Rodrigues • Mindfulness
+                                            </small>
+
+                                        </div>
+
+                                        <div class="col-md-4 text-md-end">
+
+                                            <strong>
+                                                14 de Maio, 2026
+                                            </strong>
+
+                                            <br>
+
+                                            <small>
+                                                09:30 - 10:30
+                                            </small>
+
+                                        </div>
+
+                                        <div class="col-md-2 text-end">
+
+                                            <button class="btn btn-outline-success btn-sm">
+                                                Remarcar
+                                            </button>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- HISTÓRICO -->
+                    <div class="card">
+
+                        <div class="card-body">
+
+                            <h5 class="mb-4">
+                                Histórico Recente
+                            </h5>
+
+                            <div class="d-flex justify-content-between border-bottom pb-3 mb-3">
+
+                                <div>
+                                    <strong>Consulta Inicial</strong><br>
+                                    <small class="text-muted">
+                                        Dra. Maria Adriana
+                                    </small>
+                                </div>
+
+                                <small>
+                                    10 Abril 2026
+                                </small>
+
+                            </div>
+
+                            <div class="d-flex justify-content-between">
+
+                                <div>
+                                    <strong>Sessão Integrativa</strong><br>
+                                    <small class="text-muted">
+                                        Clara Rodrigues
+                                    </small>
+                                </div>
+
+                                <small>
+                                    28 Março 2026
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- DIREITA -->
+                <div class="col-lg-3">
+
+                    <div class="card">
+
+                        <div class="card-body">
+
+                            <h5 id="mesAno"></h5>
+
+                            <table class="table table-sm text-center">
+
+                                <thead>
+                                    <tr>
+                                        <th>D</th>
+                                        <th>S</th>
+                                        <th>T</th>
+                                        <th>Q</th>
+                                        <th>Q</th>
+                                        <th>S</th>
+                                        <th>S</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="calendario">
+                                </tbody>
+
+                            </table>
+
+                            <hr>
+
+                            <div>
+                                <p class="mb-1">
+                                    🟢 Consulta Médica
+                                </p>
+
+                                <p>
+                                    ⚪ Prática Integrativa
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</div>
+
+<script>
+
+const hoje = new Date();
+
+const meses = [
+    "Janeiro", "Fevereiro", "Março", "Abril",
+    "Maio", "Junho", "Julho", "Agosto",
+    "Setembro", "Outubro", "Novembro", "Dezembro"
+];
+
+const mesAtual = hoje.getMonth();
+const anoAtual = hoje.getFullYear();
+
+document.getElementById("mesAno").innerHTML =
+`${meses[mesAtual]} ${anoAtual}`;
+
+const calendario = document.getElementById("calendario");
+
+const primeiroDia = new Date(
+    anoAtual,
+    mesAtual,
+    1
+).getDay();
+
+const ultimoDia = new Date(
+    anoAtual,
+    mesAtual + 1,
+    0
+).getDate();
+
+let linha = document.createElement("tr");
+
+for(let i = 0; i < primeiroDia; i++){
+    linha.appendChild(document.createElement("td"));
+}
+
+for(let dia = 1; dia <= ultimoDia; dia++){
+
+    if(linha.children.length === 7){
+        calendario.appendChild(linha);
+        linha = document.createElement("tr");
+    }
+
+    const td = document.createElement("td");
+    td.textContent = dia;
+
+    if(dia === hoje.getDate()){
+
+        td.classList.add(
+            "table-success",
+            "fw-bold"
+        );
+
+    }
+
+    linha.appendChild(td);
+}
+
+while(linha.children.length < 7){
+    linha.appendChild(document.createElement("td"));
+}
+
+calendario.appendChild(linha);
+
+</script>
+
+</body>
+</html>

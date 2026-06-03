@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página do Paciente</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container-fluid">
+
+    <div class="row min-vh-100">
+
+        <!-- MENU LATERAL -->
+        <aside class="col-md-2 border-end">
+
+            <div class="p-3">
+
+                <div class="mb-4">
+                    <h5>Ana Paula Ferreira</h5>
+                    <small>Paciente - Plano 03</small>
+                </div>
+
+                <h6>MINHA SAÚDE</h6>
+
+                <div class="list-group mb-4">
+                    <a href="#" class="list-group-item list-group-item-action active">
+                        Início
+                    </a>
+
+                    <a href="#" class="list-group-item list-group-item-action">
+                        Agendamentos
+                    </a>
+
+                    <a href="#" class="list-group-item list-group-item-action">
+                        Meu Tratamento
+                    </a>
+
+                    <a href="#" class="list-group-item list-group-item-action">
+                        Prescrições
+                    </a>
+                </div>
+
+                <h6>INTEGRATIVO</h6>
+
+                <div class="list-group mb-4">
+                    <a href="#" class="list-group-item list-group-item-action">
+                        Práticas Integrativas
+                    </a>
+
+                    <a href="#" class="list-group-item list-group-item-action">
+                        Minha Evolução
+                    </a>
+                </div>
+
+                <h6>COMUNICAÇÃO</h6>
+
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action">
+                        Material Educativo
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="p-3 mt-auto">
+                <button class="btn btn-outline-danger w-100">
+                    Sair da Conta
+                </button>
+            </div>
+
+        </aside>
+
+        <!-- CONTEÚDO -->
+        <main class="col-md-10 p-4">
+
+            <!-- TOPO -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+
+                <div>
+                    <h1>Olá, Ana Paula!</h1>
+                    <p id="dataAtual"></p>
+                </div>
+
+                <button class="btn btn-success">
+                    Agendar Consulta
+                </button>
+
+            </div>
+
+            <!-- PLANO + CALENDÁRIO -->
+            <div class="row g-4 mb-4">
+
+                <div class="col-lg-6">
+
+                    <div class="card h-100">
+                        <div class="card-body">
+
+                            <small>PLANO ATUAL</small>
+
+                            <h3>Plano 03 — Cannabis Medicinal</h3>
+
+                            <p>Próxima consulta: 12/05/2026</p>
+
+                            <div class="text-end">
+                                <h2>72%</h2>
+                                <small>Evolução</small>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <div class="card h-100">
+
+                        <div class="card-body">
+
+                            <h5 id="mesAno"></h5>
+
+                            <table class="table table-bordered text-center">
+                                <thead>
+                                    <tr>
+                                        <th>Dom</th>
+                                        <th>Seg</th>
+                                        <th>Ter</th>
+                                        <th>Qua</th>
+                                        <th>Qui</th>
+                                        <th>Sex</th>
+                                        <th>Sáb</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="calendario"></tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- INDICADORES -->
+            <div class="row g-4 mb-4">
+
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h2>8</h2>
+                            <p>Consultas realizadas</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h2>12</h2>
+                            <p>Sessões integrativas</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h2>3</h2>
+                            <p>Prescrições ativas</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- PARTE INFERIOR -->
+            <div class="row g-4">
+
+                <!-- TRATAMENTO -->
+                <div class="col-lg-8">
+
+                    <div class="card h-100">
+
+                        <div class="card-body">
+
+                            <h4>Meu Tratamento</h4>
+
+                            <table class="table">
+
+                                <tr>
+                                    <td>Médico responsável</td>
+                                    <td>Dra. Maria Adriana</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Condição tratada</td>
+                                    <td>Dor crônica + Insônia</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Medicamento atual</td>
+                                    <td>CBD 50mg/dia</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Início do tratamento</td>
+                                    <td>08/04/2026</td>
+                                </tr>
+
+                            </table>
+
+                            <div class="card">
+                                <div class="card-body">
+
+                                    <h5>CBD Full Spectrum 50mg</h5>
+
+                                    <small>
+                                        Via sublingual • 10 gotas 2x ao dia •
+                                        Validade 08/06/2026
+                                    </small>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- ATIVIDADES -->
+                <div class="col-lg-4">
+
+                    <div class="card h-100">
+
+                        <div class="card-body">
+
+                            <h4>Próximas Atividades</h4>
+
+                            <div class="list-group">
+
+                                <div class="list-group-item">
+                                    <strong>12/05</strong><br>
+                                    Consulta de retorno<br>
+                                    <small>Dra. Maria Adriana - 14h00</small>
+                                </div>
+
+                                <div class="list-group-item">
+                                    <strong>14/05</strong><br>
+                                    Sessão Integrativa<br>
+                                    <small>Clara Rodrigues - Mindfulness</small>
+                                </div>
+
+                                <div class="list-group-item">
+                                    <strong>18/05</strong><br>
+                                    Avaliação de progresso<br>
+                                    <small>Questionário de bem-estar</small>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</div>
+
+<script>
+
+// DATA ATUAL
+const hoje = new Date();
+
+document.getElementById("dataAtual").textContent =
+hoje.toLocaleDateString("pt-BR", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric"
+});
+
+// CALENDÁRIO DINÂMICO
+const calendario = document.getElementById("calendario");
+const mesAno = document.getElementById("mesAno");
+
+const meses = [
+    "Janeiro","Fevereiro","Março","Abril",
+    "Maio","Junho","Julho","Agosto",
+    "Setembro","Outubro","Novembro","Dezembro"
+];
+
+const mes = hoje.getMonth();
+const ano = hoje.getFullYear();
+
+mesAno.textContent = `${meses[mes]} ${ano}`;
+
+const primeiroDia = new Date(ano, mes, 1).getDay();
+const ultimoDia = new Date(ano, mes + 1, 0).getDate();
+
+let linha = document.createElement("tr");
+
+for(let i = 0; i < primeiroDia; i++){
+    linha.appendChild(document.createElement("td"));
+}
+
+for(let dia = 1; dia <= ultimoDia; dia++){
+
+    if(linha.children.length === 7){
+        calendario.appendChild(linha);
+        linha = document.createElement("tr");
+    }
+
+    const td = document.createElement("td");
+    td.textContent = dia;
+
+    if(dia === hoje.getDate()){
+        td.classList.add("table-success","fw-bold");
+    }
+
+    linha.appendChild(td);
+}
+
+while(linha.children.length < 7){
+    linha.appendChild(document.createElement("td"));
+}
+
+calendario.appendChild(linha);
+
+</script>
+
+</body>
+</html>
