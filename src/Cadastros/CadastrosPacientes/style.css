@@ -73,7 +73,7 @@ body {
 /* ---- ÁREA DO LOGO ---- */
 .area-logo {
     padding: 2.8rem 3rem 2.5rem;
-    border-bottom: 1px solid rgba(255,255,255,0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     margin-bottom: 0;
 }
 
@@ -103,7 +103,7 @@ body {
 }
 
 .texto-painel p {
-    color: rgba(255,255,255,.72);
+    color: rgba(255, 255, 255, .72);
     font-size: 1.35rem;
     line-height: 1.75;
 }
@@ -139,7 +139,7 @@ body {
     position: relative;
     z-index: 2;
     padding: 2.5rem 3rem;
-    border-top: 1px solid rgba(255,255,255,0.12);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .rodape-frase {
@@ -153,7 +153,7 @@ body {
 
 .rodape-sub {
     margin-top: .8rem;
-    color: rgba(255,255,255,.5);
+    color: rgba(255, 255, 255, .5);
     font-size: 1.15rem;
     letter-spacing: 0.02em;
 }

@@ -10,7 +10,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Fontes -->
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="loginpaciente.css">
 
@@ -18,117 +20,125 @@
 
 <body>
 
-<div class="container-fluid">
-    <div class="row min-vh-100">
+    <div class="container-fluid">
+        <div class="row min-vh-100">
 
-        <!-- ================================================= -->
-        <!-- PAINEL ESQUERDO -->
-        <!-- ================================================= -->
-        <div class="col-lg-3 painel-esquerdo">
+            <!-- ================================================= -->
+            <!-- PAINEL ESQUERDO -->
+            <!-- ================================================= -->
+            <div class="col-lg-3 painel-esquerdo">
 
-            <!-- IMAGEM DE FUNDO: substitua src pelo caminho da sua foto de fundo -->
-            <img src="/src/img/folha.svg" alt="fundo" class="imagem-fundo">
+                <!-- IMAGEM DE FUNDO: substitua src pelo caminho da sua foto de fundo -->
+                <img src="/src/img/folha.svg" alt="fundo" class="imagem-fundo">
 
-            <div class="overlay-painel"></div>
+                <div class="overlay-painel"></div>
 
-            <!-- LOGO: substitua src pelo caminho do seu logo -->
-            <div class="area-logo">
-                <img src="/src/img/Medpics_logo_HP@4x copy.png" alt="MedPics Logo" class="logo-medpics">
-            </div>
-
-            <div class="conteudo-painel">
-
-                <div class="texto-painel">
-                    <h1>Bem-vindo de volta</h1>
-                    <p>
-                        Acesse sua conta para gerenciar agendamentos, histórico de tratamentos e muito mais.
-                    </p>
+                <!-- LOGO: substitua src pelo caminho do seu logo -->
+                <div class="area-logo">
+                    <img src="/src/img/Medpics_logo_HP@4x copy.png" alt="MedPics Logo" class="logo-medpics">
                 </div>
 
-                <div class="lista-beneficios">
+                <div class="conteudo-painel">
 
-                    <!-- ÍCONE 1: substitua src pelo ícone de agendamentos -->
-                    <div class="beneficio">
-                        <img src="/src/img/check-cadastro.svg" alt="agendamentos" class="icone-beneficio">
-                        <span>Vizualize e gerencie seus agendamentos</span>
+                    <div class="texto-painel">
+                        <h1>Bem-vindo de volta</h1>
+                        <p>
+                            Acesse sua conta para gerenciar agendamentos, histórico de tratamentos e muito mais.
+                        </p>
                     </div>
 
-                    <!-- ÍCONE 2: substitua src pelo ícone de histórico -->
-                    <div class="beneficio">
-                        <img src="/src/img/cadeado.svg" alt="histórico" class="icone-beneficio">
-                        <span>Acesse seu histórico de tratamentos</span>
-                    </div>
+                    <div class="lista-beneficios">
 
-                    <!-- ÍCONE 3: substitua src pelo ícone de comunicação -->
-                    <div class="beneficio">
-                        <img src="/src/img/celular.svg" alt="comunicação" class="icone-beneficio">
-                        <span>Comunique-se com seu terapeuta</span>
+                        <!-- ÍCONE 1: substitua src pelo ícone de agendamentos -->
+                        <div class="beneficio">
+                            <img src="/src/img/check-cadastro.svg" alt="agendamentos" class="icone-beneficio">
+                            <span>Vizualize e gerencie seus agendamentos</span>
+                        </div>
+
+                        <!-- ÍCONE 2: substitua src pelo ícone de histórico -->
+                        <div class="beneficio">
+                            <img src="/src/img/cadeado.svg" alt="histórico" class="icone-beneficio">
+                            <span>Acesse seu histórico de tratamentos</span>
+                        </div>
+
+                        <!-- ÍCONE 3: substitua src pelo ícone de comunicação -->
+                        <div class="beneficio">
+                            <img src="/src/img/celular.svg" alt="comunicação" class="icone-beneficio">
+                            <span>Comunique-se com seu terapeuta</span>
+                        </div>
+
                     </div>
 
                 </div>
 
+                <div class="rodape-painel">
+                    <p class="rodape-sub">Cadastro gratuito — Sem mensalidade</p>
+                </div>
+
             </div>
 
-            <div class="rodape-painel">
-                <p class="rodape-sub">Cadastro gratuito — Sem mensalidade</p>
+            <!-- ================================================= -->
+            <!-- FORMULÁRIO DE LOGIN -->
+            <!-- ================================================= -->
+            <div class="col-lg-9 painel-formulario">
+
+                <div class="container-formulario">
+
+                    <h2 class="titulo-formulario">Entre na conta</h2>
+                    <p class="subtitulo-formulario">Use seu e-mail e senha para acessar o sistema</p>
+
+                    <form>
+
+                        <div class="mb-4">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" placeholder="seu@email.com">
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <label for="senha" class="mb-0">Senha</label>
+                            </div>
+                            <input type="password" id="senha" class="form-control" placeholder="••••••••">
+                            <a href="#" class="link-esqueci">Esqueci minha senha</a>
+                        </div>
+
+
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" id="manterConectado">
+                            <label class="form-check-label" for="manterConectado">
+                                Manter conectado
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn botao-entrar" id="botaoEntrar">
+                            Entrar
+                        </button>
+
+                        <div class="divisor-cadastro">
+                            <div class="divisor-linha"></div>
+                            <div class="divisor-texto">
+                                Ainda não tem conta? <a href="/src/Cadastros/CadastrosPacientes/">Cadastre-se
+                                    gratuitamente</a>
+                            </div>
+                            <div class="divisor-linha"></div>
+                        </div>
+
+                    </form>
+
+                </div>
+
             </div>
 
         </div>
-
-        <!-- ================================================= -->
-        <!-- FORMULÁRIO DE LOGIN -->
-        <!-- ================================================= -->
-        <div class="col-lg-9 painel-formulario">
-
-            <div class="container-formulario">
-
-                <h2 class="titulo-formulario">Entre na conta</h2>
-                <p class="subtitulo-formulario">Use seu e-mail e senha para acessar o sistema</p>
-
-                <form>
-
-                    <div class="mb-4">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" class="form-control" placeholder="seu@email.com">
-                    </div>
-
-                    <div class="mb-3">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <label for="senha" class="mb-0">Senha</label>
-                        </div>
-                        <input type="password" id="senha" class="form-control" placeholder="••••••••">
-                        <a href="#" class="link-esqueci">Esqueci minha senha</a>
-                    </div>
-                    
-
-                    <div class="form-check mb-4">
-                        <input class="form-check-input" type="checkbox" id="manterConectado">
-                        <label class="form-check-label" for="manterConectado">
-                            Manter conectado
-                        </label>
-                    </div>
-
-                    <button type="submit" class="btn botao-entrar">
-                        Entrar
-                    </button>
-
-                    <div class="divisor-cadastro">
-                        <div class="divisor-linha"></div>
-                        <div class="divisor-texto">
-                            Ainda não tem conta? <a href="/src/Cadastros/CadastrosPacientes/">Cadastre-se gratuitamente</a>
-                        </div>
-                        <div class="divisor-linha"></div>
-                    </div>
-
-                </form>
-
-            </div>
-
-        </div>
-
     </div>
-</div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById("botaoEntrar").addEventListener("click", function (e) {
+            e.preventDefault();
+            window.location.href = "/src/Pacientes/Pasciente/paciente.html";
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

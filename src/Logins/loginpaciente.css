@@ -12,21 +12,29 @@
             --marrom-textos: #6E5A4F;
             --branco: #ffffff;
             --preto: #000;
- 
+
             --fonte-titulo: 'Playfair Display', serif;
             --fonte-texto: 'DM Sans', sans-serif;
         }
- 
+
         /* ================================================= */
         /* RESET */
         /* ================================================= */
-        html { font-size: 62.5%; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html {
+            font-size: 62.5%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             background: var(--verde-texto);
             font-family: var(--fonte-texto);
         }
- 
+
         /* ================================================= */
         /* PAINEL ESQUERDO */
         /* ================================================= */
@@ -40,14 +48,14 @@
             padding: 0;
             min-height: 100vh;
         }
- 
+
         .conteudo-painel,
         .rodape-painel,
         .area-logo {
             position: relative;
             z-index: 2;
         }
- 
+
         /* ---- IMAGEM DE FUNDO DO PAINEL ---- */
         /* Substitua o src da tag .imagem-fundo pelo caminho da sua imagem */
         .imagem-fundo {
@@ -60,33 +68,31 @@
             pointer-events: none;
             z-index: 0;
         }
- 
+
         /* Gradiente sobre a foto para legibilidade */
         .overlay-painel {
             position: absolute;
             inset: 0;
-            background: linear-gradient(
-                to bottom,
-                rgba(110,90,79,0.55) 0%,
-                rgba(110,90,79,0.78) 60%,
-                rgba(110,90,79,0.95) 100%
-            );
+            background: linear-gradient(to bottom,
+                    rgba(110, 90, 79, 0.55) 0%,
+                    rgba(110, 90, 79, 0.78) 60%,
+                    rgba(110, 90, 79, 0.95) 100%);
             z-index: 1;
         }
- 
+
         /* ---- ÁREA DO LOGO ---- */
         .area-logo {
             padding: 2.8rem 3rem 2.5rem;
-            border-bottom: 1px solid rgba(255,255,255,0.12);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
         }
- 
+
         /* Substitua o src da tag .logo-medpics pelo caminho do seu logo */
         .logo-medpics {
             width: 20rem;
             height: auto;
             display: block;
         }
- 
+
         /* ---- TEXTO + BENEFÍCIOS ---- */
         .conteudo-painel {
             display: flex;
@@ -94,9 +100,11 @@
             flex: 1;
             padding: 4rem 3rem 2rem;
         }
- 
-        .texto-painel { margin-bottom: 3.5rem; }
- 
+
+        .texto-painel {
+            margin-bottom: 3.5rem;
+        }
+
         .texto-painel h1 {
             font-family: var(--fonte-titulo);
             font-size: 3.2rem;
@@ -104,26 +112,26 @@
             line-height: 1.25;
             margin-bottom: 1.4rem;
         }
- 
+
         .texto-painel p {
-            color: rgba(255,255,255,.72);
+            color: rgba(255, 255, 255, .72);
             font-size: 1.35rem;
             line-height: 1.75;
         }
- 
+
         .lista-beneficios {
             margin-top: auto;
             display: flex;
             flex-direction: column;
             gap: 2rem;
         }
- 
+
         .beneficio {
             display: flex;
             align-items: center;
             gap: 1.4rem;
         }
- 
+
         /* Substitua o src de cada .icone-beneficio pelo ícone correspondente */
         .icone-beneficio {
             width: 4rem;
@@ -131,19 +139,19 @@
             flex-shrink: 0;
             object-fit: contain;
         }
- 
+
         .beneficio span {
             color: var(--branco);
             font-size: 1.35rem;
             line-height: 1.5;
         }
- 
+
         /* ---- RODAPÉ ---- */
         .rodape-painel {
             padding: 2.5rem 3rem;
-            border-top: 1px solid rgba(255,255,255,0.12);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
         }
- 
+
         .rodape-frase {
             font-family: var(--fonte-titulo);
             color: var(--branco);
@@ -151,14 +159,14 @@
             line-height: 1.4;
             margin-bottom: 0;
         }
- 
+
         .rodape-sub {
             margin-top: .8rem;
-            color: rgba(255,255,255,.5);
+            color: rgba(255, 255, 255, .5);
             font-size: 1.15rem;
             letter-spacing: 0.02em;
         }
- 
+
         /* ================================================= */
         /* PAINEL FORMULÁRIO */
         /* ================================================= */
@@ -167,27 +175,27 @@
             display: flex;
             align-items: center;
         }
- 
+
         .container-formulario {
             width: 100%;
             max-width: 72rem;
             margin: 0 auto;
             padding: 4rem 6rem 5rem;
         }
- 
+
         .titulo-formulario {
             font-family: var(--fonte-titulo);
             color: var(--verde-cta);
             font-size: 4rem;
             margin-bottom: .6rem;
         }
- 
+
         .subtitulo-formulario {
             color: var(--marrom-textos);
             font-size: 1.4rem;
             margin-bottom: 3.5rem;
         }
- 
+
         /* ================================================= */
         /* CAMPOS */
         /* ================================================= */
@@ -198,7 +206,7 @@
             margin-bottom: .8rem;
             display: block;
         }
- 
+
         .form-control {
             height: 5.4rem;
             border-radius: 1rem;
@@ -209,23 +217,27 @@
             transition: border-color 0.2s ease;
             margin-bottom: 1.2rem;
         }
- 
+
         .form-control::placeholder {
             color: #b8b0a4;
             font-size: 1.4rem;
         }
- 
+
         .form-control:focus {
             box-shadow: none;
             border-color: var(--verde-medio);
             background-color: var(--fundo-primario);
         }
- 
+
         /* ================================================= */
         /* MANTER CONECTADO */
         /* ================================================= */
-        .form-check { display: flex; align-items: center; gap: 1rem; }
- 
+        .form-check {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
         .form-check-input {
             width: 1.8rem;
             height: 1.8rem;
@@ -234,21 +246,23 @@
             flex-shrink: 0;
             cursor: pointer;
         }
- 
+
         .form-check-input:checked {
             background-color: var(--verde-cta);
             border-color: var(--verde-cta);
         }
- 
-        .form-check-input:focus { box-shadow: none; }
- 
+
+        .form-check-input:focus {
+            box-shadow: none;
+        }
+
         .form-check-label {
             font-size: 1.35rem;
             color: var(--marrom-textos);
             cursor: pointer;
             margin-top: 1.2rem;
         }
- 
+
         /* ================================================= */
         /* BOTÃO */
         /* ================================================= */
@@ -264,12 +278,12 @@
             transition: background 0.2s ease;
             border: none;
         }
- 
+
         .botao-entrar:hover {
             background: var(--verde-medio);
             color: var(--branco);
         }
- 
+
         /* ================================================= */
         /* DIVISOR "CADASTRE-SE" */
         /* ================================================= */
@@ -279,27 +293,29 @@
             gap: 1.5rem;
             margin-top: 3.5rem;
         }
- 
+
         .divisor-linha {
             flex: 1;
             height: 1px;
             background: #d6d1c8;
         }
- 
+
         .divisor-texto {
             font-size: 1.3rem;
             color: var(--marrom-textos);
             white-space: nowrap;
         }
- 
+
         .divisor-texto a {
             color: var(--verde-cta);
             font-weight: 600;
             text-decoration: none;
         }
- 
-        .divisor-texto a:hover { text-decoration: underline; }
- 
+
+        .divisor-texto a:hover {
+            text-decoration: underline;
+        }
+
         /* Esqueci senha */
         .link-esqueci {
             font-size: 1.3rem;
@@ -307,13 +323,21 @@
             text-decoration: none;
             font-weight: 500;
         }
- 
-        .link-esqueci:hover { text-decoration: underline; color: var(--verde-medio); }
- 
+
+        .link-esqueci:hover {
+            text-decoration: underline;
+            color: var(--verde-medio);
+        }
+
         /* ================================================= */
         /* RESPONSIVO */
         /* ================================================= */
         @media (max-width: 992px) {
-            .painel-esquerdo { min-height: auto; }
-            .container-formulario { padding: 3.5rem 2.5rem; }
+            .painel-esquerdo {
+                min-height: auto;
+            }
+
+            .container-formulario {
+                padding: 3.5rem 2.5rem;
+            }
         }
