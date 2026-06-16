@@ -1,7 +1,7 @@
 # Frontend Guidelines — Projeto Clínica Faculdade
 
 > Documento de referência oficial para desenvolvimento das próximas páginas do sistema.
-> Baseado exclusivamente nos padrões definidos e aprovados durante a construção do dashboard do paciente.
+> Baseado exclusivamente nos padrões definidos e aprovados durante a construção do dashboard do paciente e página de agendamentos.
 
 ---
 
@@ -54,20 +54,21 @@
 }
 ```
 
-As linhas de cards utilizam classes de crescimento proporcional:
+As linhas de cards podem utilizar classes de crescimento proporcional quando necessário:
 
 ```css
 .secao-adaptativa { flex-grow: 1; min-height: 18vh; }
-.secao-inferior    { flex-grow: 2; min-height: 35vh; }
 ```
 
 ### Grid de colunas (Bootstrap)
 
-| Linha | Colunas |
-|---|---|
-| Plano + Agenda | `col-xxl-6 col-xl-6 col-lg-6` (50% cada) |
-| Indicadores | `col-xxl-4 col-xl-4 col-md-4` (33% cada) |
-| Tratamento + Atividades | `col-xxl-8 col-xl-8 col-lg-8` + `col-xxl-4 col-xl-4 col-lg-4` |
+| Página | Linha | Colunas |
+|---|---|---|
+| Dashboard paciente | Plano + Agenda | `col-xxl-6 col-xl-6 col-lg-6` (50% cada) |
+| Dashboard paciente | Indicadores | `col-xxl-4 col-xl-4 col-md-4` (33% cada) |
+| Dashboard paciente | Tratamento + Atividades | `col-xxl-8 col-xl-8 col-lg-8` + `col-xxl-4 col-xl-4 col-lg-4` |
+| Agendamentos | Consultas + Calendário | `col-xxl-9 col-xl-9 col-lg-9` + `col-xxl-3 col-xl-3 col-lg-3` |
+| Agendamentos | Histórico | `col-12` |
 
 ### Princípios
 
@@ -94,8 +95,9 @@ As linhas de cards utilizam classes de crescimento proporcional:
 ### Comportamentos aprovados
 
 - **Sidebar**: fixa em desktop (≥992px) → drawer lateral com hambúrguer em mobile
-- **Agenda**: número de dias visíveis se adapta automaticamente (24 → 12 → 8 → 6)
+- **Agenda (dashboard)**: número de dias visíveis se adapta automaticamente (24 → 12 → 8 → 6)
 - **Próximas Atividades**: layout horizontal → vertical no mobile
+- **Agendamentos**: layout compacto com wrap no mobile
 - **Fontes**: `clamp()` para escalabilidade progressiva
 - **Espaçamentos**: redução gradual nos breakpoints menores
 
@@ -118,7 +120,7 @@ Usar `matchMedia` com listener para reagir a redimensionamentos sem polling.
 ```css
 .card {
     background-color: var(--fundo-primario);
-    border: 1px solid var(--fundo-secundario);
+    border: 1px solid rgba(0,0,0,0.08);   /* borda escura sutil */
     border-radius: 1.5vmax;
 }
 ```
@@ -127,17 +129,17 @@ Usar `matchMedia` com listener para reagir a redimensionamentos sem polling.
 
 ```css
 .card-title-section {
-    font-family: var(--fonte-texto);
+    font-family: var(--fonte-titulo);
     font-weight: 400;              /* peso moderado, evitar bold */
     font-size: clamp(1.4rem, 0.95vw, 1.85rem);
     color: var(--verde-texto);
-    margin-bottom: 1.4rem;
+    margin-bottom: 1.2rem — 1.4rem;
     display: flex;
     align-items: center;
     gap: 0.85rem;                 /* espaçamento entre ícone e texto */
     letter-spacing: -0.01em;
-    margin-left: 0.75rem;
-    margin-top: 0.75rem;
+    margin-left: 0.5rem — 0.75rem;
+    margin-top: 0.5rem — 0.75rem;
 }
 
 .card-title-section .icon {
@@ -155,6 +157,7 @@ Usar `matchMedia` com listener para reagir a redimensionamentos sem polling.
 - Ícone de 1.6rem × 1.6rem com `object-fit: contain`
 - Distância de 0.85rem entre ícone e texto do título
 - Títulos com peso 400 (leve), não bold
+- Borda escura sutil: `rgba(0,0,0,0.08)` em cards principais, `rgba(0,0,0,0.06)` em cards internos
 
 ---
 
@@ -171,9 +174,9 @@ Usar `matchMedia` com listener para reagir a redimensionamentos sem polling.
 
 | Elemento | Font | Tamanho | Peso |
 |---|---|---|---|
-| Título da página (Olá, Ana Paula!) | `--fonte-titulo` | `clamp(2.4rem, 2vw, 3.2rem)` | 600 |
+| Título da página | `--fonte-titulo` | `clamp(2.4rem, 2vw, 3.2rem)` | 600 |
 | Título do plano | `--fonte-titulo` | `clamp(2rem, 1.5vw, 3rem)` | 600 |
-| Número de evolução (72%) | `--fonte-titulo` | `clamp(2.8rem, 2vw, 4rem)` | 600 |
+| Número de evolução | `--fonte-titulo` | `clamp(2.8rem, 2vw, 4rem)` | 600 |
 | Títulos de cards | `--fonte-texto` | `clamp(1.4rem, 0.95vw, 1.85rem)` | 400 |
 | Títulos de atividades | `--fonte-texto` | `clamp(1rem, 1vw, 1.3rem)` | 500 |
 | Números dos indicadores | `--fonte-titulo` | `clamp(2.5rem, 3vw, 4rem)` | 600 |
@@ -181,6 +184,10 @@ Usar `matchMedia` com listener para reagir a redimensionamentos sem polling.
 | Número da agenda | `--fonte-texto` | 1.5rem | 500 |
 | Dia da semana (agenda) | `--fonte-texto` | 0.85rem | 500 |
 | Mês (agenda) | `--fonte-texto` | 0.8rem | 500 |
+| **Agendamentos — título consulta** | `--fonte-texto` | 1.3rem | 600 |
+| **Agendamentos — subtítulo consulta** | `--fonte-texto` | 1.1rem | 400 |
+| **Agendamentos — data** | `--fonte-texto` | 1.2rem | 600 |
+| **Agendamentos — horário** | `--fonte-texto` | 1.1rem | 400 |
 
 ### Regras
 
@@ -188,6 +195,7 @@ Usar `matchMedia` com listener para reagir a redimensionamentos sem polling.
 - Labels e textos auxiliares com `opacity: 0.75` quando apropriado
 - Usar `clamp()` para escalabilidade em vez de media queries de fonte
 - `line-height: 1.3` para textos corridos, `1` para números e ícones
+- Subtítulos e metadados usar `opacity: 0.75` ou `0.8` para menor destaque
 
 ---
 
@@ -195,22 +203,26 @@ Usar `matchMedia` com listener para reagir a redimensionamentos sem polling.
 
 ### Padding de cards
 
-| Card | Padding base | Redução 1200px | Redução 768px |
-|---|---|---|---|
-| Plano Atual | `1.5vmax 2vmax` | automático via vmax | automático |
-| Agenda | `1.5vmax` | automático | automático |
-| Indicadores | `1.5vmax` | automático | automático |
-| Tratamento (tabela) | `1rem 0.75rem` por célula | mantido | mantido |
-| Atividades (itens) | `1.5rem` desktop → `1rem 1.25rem` tablet → `1rem 1.25rem` mobile | — | — |
+| Card | Padding base | Mobile |
+|---|---|---|
+| Plano Atual | `1.5vmax 2vmax` | `1.5vmax 2vmax` |
+| Agenda | `1.5vmax` | `1.5vmax` |
+| Indicadores | `1.5vmax` | `1.5vmax` |
+| Tratamento (tabela) | `1rem 0.75rem` por célula | mantido |
+| Atividades (itens) | `1.5rem` | `1rem 1.25rem` |
+| **Agendamentos (itens)** | `1.2rem 1.4rem` | `0.9rem 1rem` |
+| **Calendário mini** | padding interno `0.2rem 0.1rem` células | mantido |
+| **Histórico (itens)** | `1rem 0` | mantido |
 
 ### Espaçamentos entre elementos
 
 - Gap entre seções: `1.5vh`
 - Gap entre cards na mesma row: Bootstrap `g-4` (1.5rem)
 - Gap entre itens de atividades: `1rem`
+- Gap entre itens de agendamentos: `0.6rem`
 - Distância ícone → título: `0.85rem`
-- Distância título → conteúdo: `1.4rem`
-- Margem lateral dos títulos de seção: `0.75rem`
+- Distância título → conteúdo: `1.2rem — 1.4rem`
+- Margem lateral dos títulos de seção: `0.5rem — 0.75rem`
 
 ### Regras
 
@@ -220,7 +232,7 @@ Usar `matchMedia` com listener para reagir a redimensionamentos sem polling.
 
 ---
 
-## 7. Agenda
+## 7. Agenda (dashboard paciente)
 
 ### Estrutura
 
@@ -251,7 +263,7 @@ Usar `matchMedia` com listener para reagir a redimensionamentos sem polling.
 
 ```css
 .agenda-item-dia-semana { font-size: 0.85rem; letter-spacing: 0.05em; }
-.agenda-item-circulo    { width: 3.6rem; height: 3.6rem; border-radius: 50%; border: 1.5px solid; }
+.agenda-item-circulo    { width: 3.6rem; height: 3.6rem; border-radius: 50%; border: 1.5px solid rgba(0,0,0,0.08); }
 .agenda-item-numero     { font-size: 1.5rem; font-weight: 500; }
 .agenda-item-mes        { font-size: 0.8rem; opacity: 0.75; }
 ```
@@ -272,7 +284,7 @@ Usar `matchMedia` com listener para reagir a redimensionamentos sem polling.
 
 ---
 
-## 8. Próximas Atividades
+## 8. Próximas Atividades (dashboard paciente)
 
 ### Estrutura
 
@@ -304,21 +316,20 @@ Usar `matchMedia` com listener para reagir a redimensionamentos sem polling.
     content: "";
     position: absolute;
     left: 0;
-    top: 10%;           /* centralizado verticalmente */
+    top: 10%;
     width: 4px;         /* 3px no mobile */
     height: 80%;        /* 70% no mobile */
     border-radius: 4px;
 }
 ```
 
-Cores:
 - `.consulta1::before` → `--marrom-selecao-item`
 - `.consulta2::before` → `--marrom-textos`
 - `.consulta3::before` → `--verde-cta`
 
 ---
 
-## 9. Meu Tratamento
+## 9. Meu Tratamento (dashboard paciente)
 
 ### Estrutura
 
@@ -331,7 +342,6 @@ Tabela com labels (esquerda) e valores (direita):
             <td>Médico responsável</td>
             <td>Dra. Maria Adriana</td>
         </tr>
-        <!-- ... -->
     </tbody>
 </table>
 ```
@@ -341,7 +351,7 @@ Tabela com labels (esquerda) e valores (direita):
 ```css
 .tabela-tratamento td {
     font-size: 1rem;
-    padding: 1rem 0.75rem;     /* padding horizontal uniforme */
+    padding: 1rem 0.75rem;
     color: var(--marrom-textos);
     font-weight: 400;
     vertical-align: middle;
@@ -349,7 +359,7 @@ Tabela com labels (esquerda) e valores (direita):
 .tabela-tratamento td:last-child {
     font-weight: 500;
     color: var(--verde-texto);
-    text-align: left;           /* alinhado à esquerda */
+    text-align: left;
     padding-right: 0.75rem;
 }
 ```
@@ -359,6 +369,7 @@ Tabela com labels (esquerda) e valores (direita):
 ```css
 .card-medicamento {
     background-color: var(--fundo-secundario);
+    border: 1px solid rgba(0,0,0,0.08);
     margin-top: 1.5rem;
     border-radius: 1.5rem;
 }
@@ -369,7 +380,143 @@ Tabela com labels (esquerda) e valores (direita):
 
 ---
 
-## 10. Sidebar e Navegação
+## 10. Página de Agendamentos
+
+### Estrutura da página
+
+```html
+<!-- Mesma estrutura dashboard-layout + sidebar + dashboard-content -->
+<main class="dashboard-content">
+    <!-- TOPO com título "Agendamentos" + subtítulo + botão -->
+    <!-- LINHA 1: Próximas Consultas (col-xxl-9) + Calendário Mini (col-xxl-3) -->
+    <!-- LINHA 2: Histórico Recente (col-12) -->
+</main>
+```
+
+### Cards de consulta (agendamento-item)
+
+Estrutura horizontal: `[Ícone circular] [Título + Info] [Data + Horário] [Botão Remarcar]`
+
+```html
+<div class="agendamento-item">
+    <div class="agendamento-icone">
+        <img src="/src/img/icon-agendamentos.svg" class="agendamento-icone-img">
+    </div>
+    <div class="agendamento-info">
+        <strong>Consulta de Retorno</strong>
+        <span>Profissional <span class="dot">•</span> Especialidade</span>
+    </div>
+    <div class="agendamento-data-horario">
+        <span class="agendamento-data-texto">12 de Maio, 2026</span>
+        <span class="agendamento-hora-texto">14:00 – 15:00</span>
+    </div>
+    <button class="btn-remarcar">Remarcar</button>
+</div>
+```
+
+### Estilo
+
+```css
+.agendamento-item {
+    display: flex; align-items: center; gap: 1.2rem;
+    padding: 1.2rem 1.4rem; border-radius: 1.2rem;
+    background: var(--fundo-secundario);
+    margin-bottom: 0.6rem; border: 1px solid rgba(0,0,0,0.06);
+}
+```
+
+### Ícone circular
+
+```css
+.agendamento-icone {
+    width: 4rem; height: 4rem; min-width: 4rem;
+    border-radius: 50%;
+    background-color: var(--fundo-secundario);
+    display: flex; align-items: center; justify-content: center;
+}
+.agendamento-icone-img { width: 4rem; height: 4rem; object-fit: contain; }
+.agendamento-icone--integrativa { background-color: #e8ede4; }
+```
+
+### Data e horário
+
+```css
+.agendamento-data-horario {
+    display: flex; flex-direction: column; align-items: flex-end;
+    white-space: nowrap; flex-shrink: 0;
+}
+.agendamento-data-texto { font-size: 1.2rem; font-weight: 600; color: var(--verde-texto); }
+.agendamento-hora-texto { font-size: 1.1rem; color: var(--marrom-textos); }
+```
+
+### Botão Remarcar
+
+```css
+.btn-remarcar {
+    background-color: var(--branco);
+    border: 1px solid rgba(0,0,0,0.08);
+    color: var(--verde-cta);
+    font-size: 1.1rem; font-weight: 500;
+    padding: 0.4rem 1rem; border-radius: 0.6rem;
+    white-space: nowrap; cursor: pointer; flex-shrink: 0;
+}
+.btn-remarcar:hover {
+    background-color: var(--verde-cta); color: var(--branco);
+    border-color: var(--verde-cta);
+}
+```
+
+### Calendário Mini
+
+Calendário mensal tradicional com navegação e indicadores de eventos:
+
+```css
+.cal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem; }
+.cal-mes-titulo { font-family: var(--fonte-titulo); font-weight: 600; font-size: 1.2rem; color: var(--verde-texto); }
+
+.cal-btn {
+    width: 2.2rem; height: 2.2rem;
+    border: 1px solid rgba(0,0,0,0.08);
+    background-color: var(--branco);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+}
+```
+
+Dias com indicadores:
+- `.dia-mini--hoje` — dia atual (borda verde 2px, sem fundo)
+- `.dia-mini--medica` — consulta médica (fundo verde)
+- `.dia-mini--integrativa` — prática integrativa (fundo secundário)
+
+### Legenda do calendário
+
+```css
+.legenda-cal { display: flex; flex-direction: column; gap: 0.5rem; }
+.legenda-item { display: flex; align-items: center; gap: 0.6rem; font-size: 1rem; opacity: 0.8; }
+.legenda-dot { width: 0.9rem; height: 0.9rem; border-radius: 50%; flex-shrink: 0; }
+.legenda-dot--medica { background-color: var(--verde-cta); }
+.legenda-dot--integrativa { background-color: var(--fundo-secundario); border: 1.5px solid var(--marrom-selecao-item); }
+```
+
+### Histórico Recente
+
+```css
+.historico-item {
+    display: flex; align-items: flex-start; justify-content: space-between;
+    gap: 1rem; padding: 1rem 0;
+    border-bottom: 1px solid var(--fundo-secundario);
+    margin-left: 0.5rem;
+}
+.historico-item--ultimo { border-bottom: none; padding-bottom: 0; }
+.historico-item strong { font-size: 1.25rem; font-weight: 500; display: block; }
+.historico-item span { font-size: 0.95rem; opacity: 0.7; }
+.historico-data { font-size: 1rem; opacity: 0.75; white-space: nowrap; }
+```
+
+---
+
+## 11. Sidebar e Navegação
 
 ### Desktop (≥992px)
 
@@ -377,7 +524,7 @@ Tabela com labels (esquerda) e valores (direita):
 .sidebar {
     width: 260px; min-width: 260px; max-width: 260px;
     background-color: var(--fundo-primario);
-    border-right: 1px solid var(--fundo-secundario);
+    border-right: 1px solid rgba(0,0,0,0.08);
     min-height: 100vh;
     flex-shrink: 0;
 }
@@ -390,8 +537,7 @@ A **mesma** `.sidebar` transforma-se em drawer lateral:
 ```css
 @media (max-width: 991.98px) {
     .sidebar {
-        position: fixed;
-        top: 0; left: 0;
+        position: fixed; top: 0; left: 0;
         width: 260px; height: 100vh;
         z-index: 1050;
         transform: translateX(-100%);
@@ -434,23 +580,32 @@ dashboardLayout.classList.add("menu-open");
 - Conteúdo principal desloca 260px para direita
 - Fecha ao clicar no overlay, em qualquer link, ou pressionar ESC
 
+### Navegação entre páginas
+
+- Usar links relativos: `../Agendamentospaciente/index.html`
+- Item ativo: classe `.active` no `list-group-item` correspondente
+
 ---
 
-## 11. Boas Práticas de Código
+## 12. Boas Práticas de Código
 
 ### HTML
 
 - Evitar duplicação de componentes (ex: não criar sidebar mobile separada — reutilizar a desktop)
 - Usar classes semânticas e consistentes
 - Preferir estrutura plana e legível
+- Toda página nova deve reutilizar: `dashboard-layout` > `sidebar` + `dashboard-content`
+- Incluir overlay e JavaScript do menu mobile
 
 ### CSS
 
 - Usar `clamp()` para fontes escaláveis
 - Usar `vmax`, `vh`, `rem` para espaçamentos
 - Evitar valores fixos em `px`
-- Breakpoints em `em`/`px` via media queries
+- Breakpoints via media queries
 - Manter seletores organizados por seção
+- **Bordas**: `rgba(0,0,0,0.08)` para cards principais, `rgba(0,0,0,0.06)` para cards internos
+- Reutilizar as mesmas variáveis CSS do dashboard (`--fundo-primario`, `--verde-cta`, etc.)
 
 ### JavaScript
 
@@ -458,10 +613,11 @@ dashboardLayout.classList.add("menu-open");
 - `matchMedia` com listener para breakpoints
 - Funções pequenas e reutilizáveis
 - Nomes descritivos em português (`renderizarDias`, `abrirMenuMobile`)
+- Incluir sempre o script do menu mobile
 
 ---
 
-## 12. Restrições do Projeto
+## 13. Restrições do Projeto
 
 - ❌ Não adicionar novos padrões visuais sem aprovação
 - ❌ Não modificar a paleta de cores estabelecida
@@ -473,4 +629,4 @@ dashboardLayout.classList.add("menu-open");
 
 ---
 
-*Última atualização: Junho 2026 — baseado no dashboard do paciente aprovado.*
+*Última atualização: Junho 2026 — baseado no dashboard do paciente e página de agendamentos aprovados.*
