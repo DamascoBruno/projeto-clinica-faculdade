@@ -99,13 +99,12 @@
                 <button class="btn btn-cta">+ Agendar consulta</button>
             </div>
 
-            <!-- LINHA 1: PRÓXIMAS CONSULTAS + CALENDÁRIO -->
-            <div class="row g-4 mb-4 secao-adaptativa">
+            <!-- ROW ÚNICA: CONSULTAS + HISTÓRICO (esquerda) + CALENDÁRIO (direita) -->
+            <div class="row g-4">
 
-                <!-- PRÓXIMAS CONSULTAS -->
                 <div class="col-xxl-9 col-xl-9 col-lg-9">
 
-                    <div class="card h-100">
+                    <div class="card mb-4">
                         <div class="card-body">
 
                            <h4 class="card-title-section">Próximas Consultas</h4> 
@@ -144,9 +143,32 @@
                         </div>
                     </div>
 
+                    <div class="card historico-card">
+                        <div class="card-body">
+
+                            <h4 class="card-title-section"> Histórico Recente</h4>
+
+                            <div class="historico-item">
+                                <div>
+                                    <strong>Consulta Inicial</strong>
+                                    <span>Dra. Maria Adriana</span>
+                                </div>
+                                <span class="historico-data">10 Abril 2026</span>
+                            </div>
+
+                            <div class="historico-item historico-item--ultimo">
+                                <div>
+                                    <strong>Sessão Integrativa</strong>
+                                    <span>Clara Rodrigues</span>
+                                </div>
+                                <span class="historico-data">28 Março 2026</span>
+                            </div>
+
+                        </div>
+                    </div>
+
                 </div>
 
-                <!-- CALENDÁRIO MINI -->
                 <div class="col-xxl-3 col-xl-3 col-lg-3">
 
                     <div class="card h-100">
@@ -186,39 +208,6 @@
                                     <span class="legenda-dot legenda-dot--integrativa"></span>
                                     Prática Integrativa
                                 </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- LINHA 2: HISTÓRICO RECENTE -->
-            <div class="row g-4 secao-adaptativa">
-
-                <div class="col-12">
-
-                    <div class="card">
-                        <div class="card-body">
-
-                            <h4 class="card-title-section"> Histórico Recente</h4>
-
-                            <div class="historico-item">
-                                <div>
-                                    <strong>Consulta Inicial</strong>
-                                    <span>Dra. Maria Adriana</span>
-                                </div>
-                                <span class="historico-data">10 Abril 2026</span>
-                            </div>
-
-                            <div class="historico-item historico-item--ultimo">
-                                <div>
-                                    <strong>Sessão Integrativa</strong>
-                                    <span>Clara Rodrigues</span>
-                                </div>
-                                <span class="historico-data">28 Março 2026</span>
                             </div>
 
                         </div>

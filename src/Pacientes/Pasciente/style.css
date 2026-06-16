@@ -65,12 +65,12 @@ img.icon, img.leaf, img.indicador-icon { display: inline-block; }
 /* ===== CARD PLANO ===== */
 .card-plano { background-color: var(--verde-cta); border: none; color: var(--branco); }
 .card-plano .card-body { padding: 1.5vmax 2vmax; gap: 0.6rem; }
-.card-plano .eyebrow { color: var(--texto-login); font-size: 1rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+.card-plano .rotulo-secao { color: var(--texto-login); font-size: 1rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
 .plano-titulo { font-family: var(--fonte-titulo); font-weight: 600; font-size: clamp(2rem, 1.5vw, 3rem); line-height: 1.2; max-width: 100%; }
 .evolucao-numero { font-family: var(--fonte-titulo); font-size: clamp(2.8rem, 2vw, 4rem); font-weight: 600; line-height: 1; }
 .evolucao-numero span { font-size: clamp(1.5rem, 1vw, 2rem); font-weight: 500; }
 .card-plano p { font-size: 1.3rem; opacity: 0.9; }
-.badge-up { background-color: rgba(255,255,255,0.15); color: var(--branco); font-size: 1.1rem; font-weight: 500; padding: 0.4rem 1rem; border-radius: 2rem; }
+.indicador-evolucao { background-color: rgba(255,255,255,0.15); color: var(--branco); font-size: 1.1rem; font-weight: 500; padding: 0.4rem 1rem; border-radius: 2rem; }
 
 /* ===== INDICADORES ===== */
 .card-indicador .card-body { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 1.5vmax; gap: 0.2rem; }
@@ -81,14 +81,14 @@ img.icon, img.leaf, img.indicador-icon { display: inline-block; }
 /* ===== TRATAMENTO ===== */
 .tratamento-card { min-height: 35vh; height: 100%; }
 .tabela-tratamento { flex-grow: 1; margin-bottom: 0; }
-.tabela-tratamento td { border-color: var(--fundo-secundario); font-size: 1rem; padding: 1rem 0.75rem; color: var(--marrom-textos); font-weight: 400; vertical-align: middle; }
-.tabela-tratamento td:last-child { font-weight: 500; color: var(--verde-texto); text-align: left; padding-right: 0.75rem; }
+.tabela-tratamento td { border-color: var(--fundo-secundario); font-size: 1.15rem; padding: 1.2rem 0.75rem; color: var(--marrom-textos); font-weight: 400; vertical-align: middle; }
+.tabela-tratamento td:last-child { font-weight: 500; color: var(--verde-texto); text-align: right; padding-right: 0.75rem; }
 
 /* ===== CARD MEDICAMENTO ===== */
 .card-medicamento { background-color: var(--fundo-secundario); border: 1px solid rgba(0,0,0,0.10); margin-top: 1.5rem; border-radius: 1.2rem; }
 .card-medicamento .card-body { padding: 1.5rem; }
-.card-medicamento h5 { font-family: var(--fonte-texto); font-weight: 500; font-size: 1.3rem; color: var(--verde-texto); margin-bottom: 0.5rem; }
-.card-medicamento small { color: var(--marrom-textos); font-size: 0.95rem; font-weight: 400; opacity: 0.75; }
+.card-medicamento h5 { font-family: var(--fonte-texto); font-weight: 500; font-size: 1.5rem; color: var(--verde-texto); margin-bottom: 0.5rem; }
+.card-medicamento small { color: var(--marrom-textos); font-size: 1.15rem; font-weight: 400; opacity: 0.75; }
 
 /* ===== ATIVIDADES ===== */
 .atividades-card .card-body { padding: 1.5vmax; }
