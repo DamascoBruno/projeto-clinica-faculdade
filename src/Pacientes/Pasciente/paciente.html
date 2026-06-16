@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página do Paciente</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- SIDEBAR FIXA -->
+        <aside class="sidebar d-flex flex-column">
+
+            <div class="p-4">
+
+                <div class="profile-box mb-4 d-flex align-items-center gap-3">
+                    <div class="avatar">AP</div>
+                    <div>
+                        <h5 class="mb-0">Ana Paula Ferreira</h5>
+                        <small>Paciente · Plano 03</small>
+                    </div>
+                </div>
+
+                <p class="nav-section">Minha saúde</p>
+
+                <div class="list-group mb-4">
+                    <a href="#" class="list-group-item list-group-item-action active">
+                        <img src="/src/img/icon-inicio.svg" alt="Início" class="icon"> Início
+                    </a>
+                    <a href="../Agendamentospaciente/index.html" class="list-group-item list-group-item-action">
+                        <img src="/src/img/icon-agendamentos.svg" alt="Agendamentos" class="icon"> Agendamentos
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <img src="/src/img/icon-tratamento.svg" alt="Meu Tratamento" class="icon"> Meu Tratamento
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <img src="/src/img/icon-prescricoes.svg" alt="Prescrições" class="icon"> Prescrições
+                    </a>
+                </div>
+
+                <p class="nav-section">Integrativo</p>
+
+                <div class="list-group mb-4">
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <img src="/src/img/icon-praticas-integrativas.svg" alt="Praticas Integrativas" class="icon">
+                        Práticas Integrativas
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <img src="/src/img/icon-evolucao.svg" alt="Minha Evolução" class="icon"> Minha Evolução
+                    </a>
+                </div>
+
+                <p class="nav-section">Comunicação</p>
+
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <img src="/src/img/icon-material-educativo.svg" alt="Material Educativo" class="icon">
+                        Material Educativo
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="p-4 mt-auto">
+                <button class="btn btn-logout w-100">
+                    <img src="/src/img/icon-sair.svg" alt="Sair da Conta" class="icon"> Sair da Conta
+                </button>
+            </div>
+
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="dashboard-content">
+
+            <!-- TOPO -->
+            <div class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-4">
+
+                <div class="d-flex align-items-center gap-3">
+                    <button class="mobile-menu-toggle" aria-label="Abrir menu" id="mobileMenuToggle">
+                        <span class="hamburger-lines"></span>
+                    </button>
+                    <div>
+                        <h1 class="page-title">Olá, Ana Paula! <img src="/src/img/icon-folha.svg" alt="Folha"
+                                class="leaf"></h1>
+                        <p id="dataAtual" class="page-subtitle"></p>
+                    </div>
+                </div>
+
+                <button class="btn btn-cta">+ Agendar Consulta</button>
+            </div>
+
+            <!-- LINHA 1: PLANO + AGENDA (flex-grow:1, min-height: 18vh) -->
+            <div class="row g-4 secao-adaptativa">
+
+                <div class="col-xxl-6 col-xl-6 col-lg-6">
+
+                    <div class="card card-plano h-100">
+                        <div class="card-body d-flex flex-column justify-content-center">
+
+                            <div class="d-flex justify-content-between align-items-start">
+                                <small class="eyebrow">Plano Atual</small>
+                                <small class="eyebrow">Evolução</small>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-end">
+                                <h3 class="plano-titulo">Plano 03 — Cannabis Medicinal</h3>
+                                <h2 class="evolucao-numero">72<span>%</span></h2>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-end flex-wrap gap-2">
+                                <p class="mb-0">Próxima consulta: <strong>12/05/2026</strong></p>
+                                <span class="badge-up">↑ 12% este mês</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-xxl-6 col-xl-6 col-lg-6">
+
+                    <div class="card atividades-card h-100">
+
+                        <div class="card-body d-flex flex-column">
+
+                            <div class="agenda-header">
+                                <img src="/src/img/icon-agendamentos.svg" alt="Agenda" class="agenda-header-icon">
+                                <span class="agenda-header-mes" id="agendaMesAno">Junho 2026</span>
+                                <div class="agenda-nav">
+                                    <button class="agenda-btn" id="agendaVoltar" aria-label="Voltar">‹</button>
+                                    <button class="agenda-btn" id="agendaAvancar" aria-label="Avançar">›</button>
+                                </div>
+                            </div>
+
+                            <div class="agenda-track" id="agendaTrack"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- LINHA 2: INDICADORES (flex-grow:1, min-height: 10vh) -->
+            <div class="row g-4 secao-adaptativa">
+
+                <div class="col-xxl-4 col-xl-4 col-md-4">
+                    <div class="card card-indicador h-100">
+                        <div class="card-body">
+                            <img src="/src/img/icon-consultas.svg" alt="Consultas" class="indicador-icon">
+                            <h2>8</h2>
+                            <p>Consultas realizadas</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xxl-4 col-xl-4 col-md-4">
+                    <div class="card card-indicador h-100">
+                        <div class="card-body">
+                            <img src="/src/img/icon-sessoes.svg" alt="Sessões" class="indicador-icon">
+                            <h2>12</h2>
+                            <p>Sessões integrativas</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xxl-4 col-xl-4 col-md-4">
+                    <div class="card card-indicador h-100">
+                        <div class="card-body">
+                            <img src="/src/img/icon-prescricoes2.svg" alt="Prescrições" class="indicador-icon">
+                            <h2>3</h2>
+                            <p>Prescrições ativas</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- LINHA 3: TRATAMENTO + ATIVIDADES (flex-grow:2, min-height: 35vh) -->
+            <div class="row g-4 secao-adaptativa secao-inferior">
+
+                <div class="col-xxl-8 col-xl-8 col-lg-8">
+
+                    <div class="card tratamento-card h-100">
+
+                        <div class="card-body d-flex flex-column">
+
+                            <h4 class="card-title-section"><img src="/src/img/icon-tratamento.svg" alt="Tratamento"
+                                    class="icon"> Meu Tratamento</h4>
+
+                            <table class="table tabela-tratamento">
+                                <tbody>
+                                    <tr>
+                                        <td>Médico responsável</td>
+                                        <td>Dra. Maria Adriana</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Condição tratada</td>
+                                        <td>Dor crônica + Insônia</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Medicamento atual</td>
+                                        <td>CBD 50mg/dia</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Início do tratamento</td>
+                                        <td>08/04/2026</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="card card-medicamento">
+                                <div class="card-body">
+                                    <h5 class="mb-1">CBD Full Spectrum 50mg</h5>
+                                    <small>Via sublingual · 10 gotas 2x ao dia · Validade 08/06/2026</small>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-xxl-4 col-xl-4 col-lg-4">
+
+                    <div class="card h-100">
+
+                        <div class="card-body d-flex flex-column">
+
+                            <h4 class="card-title-section"><img src="/src/img/icon-atividades.svg" alt="Atividades"
+                                    class="icon"> Próximas Atividades</h4>
+
+                            <div class="atividades-list">
+
+                                <div class="list-group-item consulta1">
+                                    <div class="atividade-data">12/05</div>
+                                    <div class="atividade-info">
+                                        <strong>Consulta de retorno</strong>
+                                        <small class="d-block">Dra. Maria Adriana · 14h00</small>
+                                    </div>
+                                </div>
+
+                                <div class="list-group-item consulta2">
+                                    <div class="atividade-data">14/05</div>
+                                    <div class="atividade-info">
+                                        <strong>Sessão Integrativa</strong>
+                                        <small class="d-block">Clara Rodrigues · Mindfulness</small>
+                                    </div>
+                                </div>
+
+                                <div class="list-group-item consulta3">
+                                    <div class="atividade-data">18/05</div>
+                                    <div class="atividade-info">
+                                        <strong>Avaliação de progresso</strong>
+                                        <small class="d-block">Questionário de bem-estar</small>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- OVERLAY MOBILE -->
+    <div class="mobile-sidebar-overlay" id="mobileOverlay"></div>
+
+    <script>
+
+        // ===== MENU MOBILE =====
+        const mobileToggle = document.getElementById("mobileMenuToggle");
+        const sidebarEl = document.querySelector(".sidebar");
+        const mobileOverlay = document.getElementById("mobileOverlay");
+        const dashboardLayout = document.querySelector(".dashboard-layout");
+
+        function abrirMenuMobile() {
+            sidebarEl.classList.add("open");
+            mobileOverlay.classList.add("open");
+            dashboardLayout.classList.add("menu-open");
+            document.body.style.overflow = "hidden";
+        }
+
+        function fecharMenuMobile() {
+            sidebarEl.classList.remove("open");
+            mobileOverlay.classList.remove("open");
+            dashboardLayout.classList.remove("menu-open");
+            document.body.style.overflow = "";
+        }
+
+        mobileToggle.addEventListener("click", () => {
+            if (sidebarEl.classList.contains("open")) {
+                fecharMenuMobile();
+            } else {
+                abrirMenuMobile();
+            }
+        });
+
+        mobileOverlay.addEventListener("click", fecharMenuMobile);
+
+        sidebarEl.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", fecharMenuMobile);
+        });
+
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && sidebarEl.classList.contains("open")) {
+                fecharMenuMobile();
+            }
+        });
+
+        const hoje = new Date();
+
+        const dataFormatada = hoje.toLocaleDateString("pt-BR", {
+            weekday: "long", day: "numeric", month: "long", year: "numeric"
+        });
+
+        document.getElementById("dataAtual").textContent =
+            dataFormatada.charAt(0).toUpperCase() + dataFormatada.slice(1);
+
+        // ===== AGENDA HORIZONTAL — INFINITA =====
+
+        const agendaTrack = document.getElementById("agendaTrack");
+        const btnVoltar = document.getElementById("agendaVoltar");
+        const btnAvancar = document.getElementById("agendaAvancar");
+
+        const diasSemana = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
+        const mesesAbr = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
+
+        const DIAS_OFFSET = 6;
+
+        // === AGENDA ADAPTATIVA (24/12/8/6 dias) ===
+        const mq1600 = window.matchMedia("(min-width: 1600px)");
+        const mq1400 = window.matchMedia("(min-width: 1400px)");
+        const mq992 = window.matchMedia("(min-width: 992px)");
+
+        let larguraAtiva = mq1600.matches ? 1600 : mq1400.matches ? 1400 : mq992.matches ? 992 : 0;
+
+        [mq1600, mq1400, mq992].forEach(mq => {
+            mq.addEventListener("change", () => {
+                const nova = mq1600.matches ? 1600 : mq1400.matches ? 1400 : mq992.matches ? 992 : 0;
+                if (nova !== larguraAtiva) {
+                    larguraAtiva = nova;
+                    renderizarDias();
+                }
+            });
+        });
+
+        function getDiasVisiveis() {
+            if (larguraAtiva >= 1600) return 24;
+            if (larguraAtiva >= 1400) return 12;
+            if (larguraAtiva >= 992) return 8;
+            return 6;
+        }
+
+        function getColunasAgenda() {
+            if (larguraAtiva >= 1600) return 12; // 2 linhas de 12
+            return getDiasVisiveis(); // 12, 8 ou 6 colunas
+        }
+
+        let dataCentral = new Date(hoje);
+        dataCentral.setHours(0, 0, 0, 0);
+
+        let diaSelecionado = null;
+        let dadosDias = [];
+
+        const eventos = new Set();
+        function adicionarEvento(dia, mes, ano) {
+            const d = new Date(ano, mes - 1, dia);
+            eventos.add(d.getTime());
+        }
+        adicionarEvento(12, 5, 2026);
+        adicionarEvento(14, 5, 2026);
+        adicionarEvento(18, 5, 2026);
+
+        function gerarDias(centro, quantidade) {
+            const metade = Math.floor(quantidade / 2);
+            const resultado = [];
+            const inicio = new Date(centro);
+            inicio.setDate(centro.getDate() - metade);
+
+            for (let i = 0; i < quantidade; i++) {
+                const data = new Date(inicio);
+                data.setDate(inicio.getDate() + i);
+                resultado.push({
+                    timestamp: data.getTime(),
+                    dia: data.getDate(),
+                    mes: data.getMonth(),
+                    ano: data.getFullYear(),
+                    diaSemana: data.getDay()
+                });
+            }
+            return resultado;
+        }
+
+        function renderizarDias() {
+            const diasVisiveis = getDiasVisiveis();
+            dadosDias = gerarDias(dataCentral, diasVisiveis);
+            agendaTrack.innerHTML = "";
+
+            dadosDias.forEach((d, idx) => {
+                const bloco = document.createElement("div");
+                bloco.className = "agenda-item";
+                bloco.dataset.timestamp = d.timestamp;
+                bloco.dataset.index = idx;
+
+                const ehHoje = d.timestamp === hoje.getTime();
+                const temEvento = eventos.has(d.timestamp);
+                const estaSelecionado = diaSelecionado === d.timestamp;
+
+                if (ehHoje) bloco.classList.add("agenda-item-hoje");
+                if (temEvento) bloco.classList.add("agenda-item-evento");
+                if (estaSelecionado) bloco.classList.add("agenda-item-selecionado");
+
+                const elDiaSemana = document.createElement("span");
+                elDiaSemana.className = "agenda-item-dia-semana";
+                elDiaSemana.textContent = diasSemana[d.diaSemana];
+
+                const elCirculo = document.createElement("div");
+                elCirculo.className = "agenda-item-circulo";
+
+                const elNumero = document.createElement("span");
+                elNumero.className = "agenda-item-numero";
+                elNumero.textContent = d.dia;
+
+                const elMes = document.createElement("span");
+                elMes.className = "agenda-item-mes";
+
+                // Em telas ≥1600px, mostrar mês apenas no primeiro dia de cada mês
+                if (larguraAtiva >= 1600) {
+                    const mesAnterior = idx > 0 ? dadosDias[idx - 1].mes : -1;
+                    if (d.mes !== mesAnterior) {
+                        elMes.textContent = mesesAbr[d.mes];
+                    }
+                } else {
+                    elMes.textContent = mesesAbr[d.mes];
+                }
+
+                elCirculo.appendChild(elNumero);
+                bloco.appendChild(elDiaSemana);
+                bloco.appendChild(elCirculo);
+                bloco.appendChild(elMes);
+
+                bloco.addEventListener("click", function () {
+                    const prevSelecionado = agendaTrack.querySelector(".agenda-item-selecionado");
+                    if (prevSelecionado) {
+                        prevSelecionado.classList.remove("agenda-item-selecionado");
+                    }
+                    this.classList.add("agenda-item-selecionado");
+                    diaSelecionado = parseInt(this.dataset.timestamp);
+                });
+
+                agendaTrack.appendChild(bloco);
+            });
+
+            atualizarMesAno();
+        }
+
+        const agendaMesAno = document.getElementById("agendaMesAno");
+
+        const mesesCompleto = [
+            "Janeiro", "Fevereiro", "Março", "Abril",
+            "Maio", "Junho", "Julho", "Agosto",
+            "Setembro", "Outubro", "Novembro", "Dezembro"
+        ];
+
+        function atualizarMesAno() {
+            if (!dadosDias.length) return;
+
+            const contagemMeses = {};
+            dadosDias.forEach(d => {
+                const chave = `${d.mes}-${d.ano}`;
+                contagemMeses[chave] = (contagemMeses[chave] || 0) + 1;
+            });
+
+            let mesPredominante = dadosDias[0].mes;
+            let anoPredominante = dadosDias[0].ano;
+            let maxContagem = 0;
+
+            for (const chave in contagemMeses) {
+                if (contagemMeses[chave] > maxContagem) {
+                    maxContagem = contagemMeses[chave];
+                    const [mes, ano] = chave.split("-");
+                    mesPredominante = parseInt(mes);
+                    anoPredominante = parseInt(ano);
+                }
+            }
+
+            agendaMesAno.textContent = `${mesesCompleto[mesPredominante]} ${anoPredominante}`;
+        }
+
+        function avancarDias() {
+            const passo = getDiasVisiveis() >= 24 ? 10 : DIAS_OFFSET;
+            dataCentral.setDate(dataCentral.getDate() + passo);
+            renderizarDias();
+        }
+
+        function voltarDias() {
+            const passo = getDiasVisiveis() >= 24 ? 10 : DIAS_OFFSET;
+            dataCentral.setDate(dataCentral.getDate() - passo);
+            renderizarDias();
+        }
+
+        btnAvancar.addEventListener("click", avancarDias);
+        btnVoltar.addEventListener("click", voltarDias);
+
+        renderizarDias();
+
+    </script>
+
+</body>
+
+</html>
