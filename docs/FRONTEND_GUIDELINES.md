@@ -520,3 +520,158 @@ Antes de iniciar qualquer nova página:
 ---
 
 *Última atualização: Junho 2026 — baseado no dashboard do paciente, agendamentos e "Meu Tratamento" aprovados.*
+
+---
+
+## 16. Refatoração Semântica de IDs e Classes
+
+### Regras obrigatórias
+
+- Todas as classes e IDs devem ser nomeadas com base no **contexto real** do componente.
+- Os nomes devem estar em **português**.
+- Os nomes devem refletir a **função** do elemento.
+- Os nomes devem refletir a **seção** em que o elemento está.
+- Os nomes devem ser **autoexplicativos**.
+- **Não utilizar nomes genéricos** sem contexto associado.
+
+### Exemplos proibidos
+
+`container`, `wrapper`, `box`, `content`, `item`, `card`, `title`, `text`, `image`, `icon`, `section`, `element` — quando não houver contexto associado.
+
+### Exemplos corretos
+
+`agenda-container`, `plano-card`, `historico-item`, `receita-nome`, `tratamento-tabela`
+
+---
+
+## 17. Convenção de Nomenclatura
+
+| Sufixo | Tipo | Exemplo |
+|---|---|---|
+| `-container` | Container | `agenda-container`, `servicos-container`, `depoimentos-container` |
+| `-card` | Card | `atividade-card`, `plano-card`, `servico-card` |
+| `-lista` | Lista | `menu-lista`, `servicos-lista`, `depoimentos-lista` |
+| `-item` | Item | `menu-item`, `servico-item`, `depoimento-item` |
+| `-botao` | Botão | `solicitar-orcamento-botao`, `entrar-em-contato-botao` |
+| `-titulo` | Título | `hero-titulo`, `servicos-titulo`, `agenda-titulo` |
+| `-subtitulo` | Subtítulo | `hero-subtitulo`, `servicos-subtitulo` |
+| `-descricao` | Descrição | `servico-descricao`, `plano-descricao` |
+| `-imagem` | Imagem | `hero-imagem`, `servico-imagem` |
+| `-icone` | Ícone | `servico-icone`, `beneficio-icone` |
+| `-secao` | Seção | `hero-secao`, `sobre-secao`, `servicos-secao` |
+
+---
+
+## 18. Compatibilidade com Bootstrap
+
+- **Nunca remover** classes Bootstrap existentes.
+- **Nunca substituir** classes Bootstrap.
+- Classes semânticas devem **complementar** o Bootstrap, não substituí-lo.
+- Estruturas `.container`, `.row`, `.col-*`, `.d-flex`, `.list-group` etc. devem permanecer intactas.
+- Antes de alterar qualquer estrutura Bootstrap, validar impactos visuais.
+
+### Exemplo correto
+
+```html
+<div class="container agenda-container">
+    <div class="row agenda-linha">
+        <div class="col-lg-4 agenda-coluna">
+```
+
+---
+
+## 19. Integridade HTML ↔ CSS ↔ JavaScript
+
+Toda alteração de nomenclatura deve obrigatoriamente validar:
+
+### HTML
+- `class` — todas as ocorrências renomeadas
+- `id` — unicidade preservada
+- `data-*` — atributos não afetados por renomeações
+- `aria-label`, `aria-labelledby` — valores mantidos
+
+### CSS
+- Seletores — correspondência exata com as novas classes
+- Pseudo-classes (`:hover`, `:active`, `:focus`) — não quebradas
+- Media queries — seletores internos atualizados
+- Animações e transições — classes referenciadas corrigidas
+- Seletores agrupados — todos os membros atualizados
+
+### JavaScript
+- `querySelector` / `querySelectorAll` — seletores corrigidos
+- `getElementById` — IDs mantidos
+- `closest` — seletores de ancestral corrigidos
+- `matches` — comparações atualizadas
+- Event listeners — alvos verificados
+- Observers (MutationObserver, IntersectionObserver) — seletores validados
+
+---
+
+## 20. Componentes Críticos — Validação Obrigatória
+
+Após qualquer refatoração, validar:
+
+| Componente | O que verificar |
+|---|---|
+| **Calendário / Agenda** | Troca de mês/ano, seleção de data, indicadores visuais, estados ativos, navegação |
+| **Carrosséis** | Autoplay, navegação manual, indicadores, arraste, responsividade |
+| **Modais** | Abertura, fechamento, backdrop, animações, foco |
+| **Menus** | Dropdowns, versão mobile vs desktop, hover, clique, fechamento automático |
+| **Formulários** | Validações, máscaras, envio, mensagens de erro, reset |
+| **Sidebar / Drawer** | Abertura mobile, overlay, fechamento ao clicar em links, tecla ESC |
+
+---
+
+## 21. Checklist Pós-Refatoração
+
+Toda refatoração deve executar:
+
+### Auditoria HTML
+- [ ] IDs válidos e únicos
+- [ ] Classes semânticas aplicadas
+- [ ] Estrutura de elementos preservada
+- [ ] Atributos Bootstrap mantidos
+
+### Auditoria CSS
+- [ ] Todos os seletores correspondem a elementos existentes no HTML
+- [ ] Nenhum seletor órfão (sem elemento correspondente)
+- [ ] Nenhum estilo duplicado
+- [ ] Media queries intactas
+
+### Auditoria JavaScript
+- [ ] Todos os seletores (`querySelector`, `getElementById`) funcionam
+- [ ] Eventos disparam corretamente
+- [ ] Componentes interativos respondem como antes
+
+### Auditoria Visual
+- [ ] Desktop — layout idêntico ao original
+- [ ] Tablet — layout idêntico ao original
+- [ ] Mobile — layout idêntico ao original
+
+---
+
+## 22. Regra de Comparação Antes e Depois
+
+Antes de finalizar qualquer refatoração:
+
+1. Comparar versão original e versão alterada lado a lado.
+2. Verificar diferenças de HTML (git diff).
+3. Verificar diferenças de CSS (git diff).
+4. Verificar diferenças de JavaScript (git diff).
+5. Identificar possíveis regressões.
+6. **Corrigir regressões antes da entrega.**
+
+---
+
+## 23. Prevenção de Regressões
+
+A IA **nunca** deve:
+
+- ❌ Renomear seletores sem atualizar CSS e JS relacionados.
+- ❌ Remover classes utilizadas por JavaScript.
+- ❌ Remover classes utilizadas por animações CSS (`@keyframes`).
+- ❌ Remover classes utilizadas por Bootstrap (ex: `d-flex`, `list-group-item`).
+- ❌ Recriar CSS inteiro quando o problema for apenas um seletor quebrado.
+- ❌ Assumir que um componente funciona apenas porque está visualmente correto.
+
+**Sempre validar funcionamento e aparência simultaneamente.**
