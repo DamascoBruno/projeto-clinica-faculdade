@@ -46,7 +46,7 @@
                     <a href="../Meutratamento/index.html" class="list-group-item list-group-item-action">
                         <img src="/src/img/icon-tratamento.svg" alt="Meu Tratamento" class="icon"> Meu Tratamento
                     </a>
-                    <a href="index.html" class="list-group-item list-group-item-action active">
+                    <a href="../Prescricoes/index.html" class="list-group-item list-group-item-action active">
                         <img src="/src/img/icon-prescricoes.svg" alt="Prescrições" class="icon"> Prescrições
                     </a>
                 </div>
@@ -98,148 +98,143 @@
                 </div>
             </div>
 
-            <!-- LINHA 1: RESUMO (3 cards) -->
+            <!-- LINHA 1: INDICADORES -->
             <div class="row g-4 mb-4">
 
-                <div class="col-lg-4 col-md-6">
-                    <div class="card card-indicador h-100">
-                        <div class="card-body">
-                            <img src="/src/img/icon-prescricoes.svg" alt="Receitas" class="indicador-icon">
-                            <h2>3</h2>
-                            <p>Receitas ativas</p>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="card card-indicador-horizontal h-100">
+                        <div class="card-body d-flex align-items-center gap-3">
+                            <img src="/src/img/icon-documentocomfundo.svg" alt="Receitas" class="indicador-icon-grande">
+                            <div>
+                                <h2 class="indicador-numero mb-0">3</h2>
+                                <p>Receitas ativas</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6">
-                    <div class="card card-indicador h-100">
-                        <div class="card-body">
-                            <img src="/src/img/icon-prescricoes2.svg" alt="Histórico" class="indicador-icon">
-                            <h2>12</h2>
-                            <p>Documentos no histórico</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="card card-indicador h-100">
-                        <div class="card-body">
-                            <img src="/src/img/icon-evolucao.svg" alt="Renovações" class="indicador-icon">
-                            <h2>2</h2>
-                            <p>Renovações pendentes</p>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="card card-indicador-horizontal h-100">
+                        <div class="card-body d-flex align-items-center gap-3">
+                            <img src="/src/img/icon-docuemntohistorico.svg" alt="Histórico" class="indicador-icon-grande">
+                            <div>
+                                <h2 class="indicador-numero mb-0">12</h2>
+                                <p>Documentos no histórico</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
             </div>
 
-            <!-- LINHA 2: RECEITAS ATIVAS -->
-            <div class="row g-4 mb-4 secao-adaptativa">
+            <!-- LINHA 2: CARD ÚNICO — RECEITAS ATIVAS + OUTROS DOCUMENTOS -->
+            <div class="row g-4">
 
                 <div class="col-12">
 
-                    <div class="card h-100">
+                    <div class="card card-main h-100">
                         <div class="card-body">
 
-                            <h4 class="card-title-section"><img src="/src/img/icon-prescricoes.svg" alt="Receitas" class="icon"> Receitas Ativas</h4>
+                            <h4 class="card-title-section"> Receitas Ativas</h4>
 
-                            <div class="row g-4">
+                            <div class="row g-4 mb-4">
 
                                 <!-- RECEITA 1 -->
                                 <div class="col-lg-6">
-
                                     <div class="card receita-card h-100">
-                                        <div class="card-body">
+                                        <div class="card-body d-flex flex-column">
 
-                                            <div class="d-flex justify-content-between align-items-start">
-                                                <div>
+                                            <div class="receita-topo">
+                                                <img src="/src/img/icon-documentomedalha.svg" alt="Receita" class="receita-icone">
+                                                <div class="receita-info-basica">
                                                     <h5 class="receita-nome">CBD Full Spectrum 50mg</h5>
-                                                    <small class="receita-data">Prescrito em 10/04/2026</small>
+                                                    <span class="receita-data">Prescrito em 10/04/2026</span>
                                                 </div>
                                                 <span class="receita-status receita-status--ativa">Ativa</span>
                                             </div>
 
-                                            <div class="receita-detalhes">
-                                                <p>Via sublingual · 10 gotas 2x ao dia · Uso contínuo</p>
-                                            </div>
+                                            <p class="receita-texto">Via sublingual · 10 gotas 2x ao dia · Uso contínuo</p>
 
-                                            <div class="d-flex justify-content-between align-items-center">
+                                            <div class="receita-divider"></div>
+
+                                            <div class="receita-rodape">
                                                 <small class="receita-validade">Validade: 08/06/2026</small>
-                                                <div class="d-flex gap-2">
-                                                    <button class="btn btn-remarcar">Visualizar</button>
-                                                    <button class="btn btn-remarcar btn-remarcar--pdf">PDF</button>
+                                                <div class="receita-acoes">
+                                                    <a href="#" class="acao-texto">
+                                                        <img src="/src/img/icon-visualizar.svg" alt="Visualizar"> Visualizar
+                                                    </a>
+                                                    <a href="#" class="acao-texto">
+                                                        <img src="/src/img/icon-download.svg" alt="PDF"> Baixar PDF
+                                                    </a>
                                                 </div>
                                             </div>
 
                                         </div>
                                     </div>
-
                                 </div>
 
                                 <!-- RECEITA 2 -->
                                 <div class="col-lg-6">
-
                                     <div class="card receita-card h-100">
-                                        <div class="card-body">
+                                        <div class="card-body d-flex flex-column">
 
-                                            <div class="d-flex justify-content-between align-items-start">
-                                                <div>
+                                            <div class="receita-topo">
+                                                <img src="/src/img/icon-documentomedalha.svg" alt="Receita" class="receita-icone">
+                                                <div class="receita-info-basica">
                                                     <h5 class="receita-nome">Óleo de THC 10mg/ml</h5>
-                                                    <small class="receita-data">Prescrito em 10/04/2026</small>
+                                                    <span class="receita-data">Prescrito em 10/04/2026</span>
                                                 </div>
                                                 <span class="receita-status receita-status--ativa">Ativa</span>
                                             </div>
 
-                                            <div class="receita-detalhes">
-                                                <p>Via sublingual · 5 gotas à noite antes de dormir</p>
-                                            </div>
+                                            <p class="receita-texto">Via sublingual · 5 gotas à noite antes de dormir</p>
 
-                                            <div class="d-flex justify-content-between align-items-center">
+                                            <div class="receita-divider"></div>
+
+                                            <div class="receita-rodape">
                                                 <small class="receita-validade">Validade: 08/06/2026</small>
-                                                <div class="d-flex gap-2">
-                                                    <button class="btn btn-remarcar">Visualizar</button>
-                                                    <button class="btn btn-remarcar btn-remarcar--pdf">PDF</button>
+                                                <div class="receita-acoes">
+                                                    <a href="#" class="acao-texto">
+                                                        <img src="/src/img/icon-visualizar.svg" alt="Visualizar"> Visualizar
+                                                    </a>
+                                                    <a href="#" class="acao-texto">
+                                                        <img src="/src/img/icon-download.svg" alt="PDF"> Baixar PDF
+                                                    </a>
                                                 </div>
                                             </div>
 
                                         </div>
                                     </div>
-
                                 </div>
 
                             </div>
 
-                        </div>
-                    </div>
+                            <h4 class="card-title-section card-title-section--grande"> Outros Documentos</h4>
 
-                </div>
-
-            </div>
-
-            <!-- LINHA 3: OUTROS DOCUMENTOS -->
-            <div class="row g-4 secao-adaptativa">
-
-                <div class="col-12">
-
-                    <div class="card">
-                        <div class="card-body">
-
-                            <h4 class="card-title-section"><img src="/src/img/icon-material-educativo.svg" alt="Documentos" class="icon"> Outros Documentos</h4>
-
-                            <div class="documento-item">
-                                <div class="documento-info">
-                                    <strong>Laudo Médico Inicial</strong>
-                                    <span>10/04/2026 · Dra. Maria Adriana</span>
+                            <div class="documento-card">
+                                <div class="documento-card-body">
+                                    <img src="/src/img/icon-documentosemfundo.svg" alt="Documento" class="documento-icone">
+                                    <div class="documento-info">
+                                        <strong>Laudo Médico Inicial</strong>
+                                        <span>10/04/2026 · Dra. Maria Adriana</span>
+                                    </div>
+                                    <a href="#" class="acao-texto">
+                                        <img src="/src/img/icon-download.svg" alt="PDF">
+                                    </a>
                                 </div>
-                                <button class="btn btn-remarcar">PDF</button>
                             </div>
 
-                            <div class="documento-item documento-item--ultimo">
-                                <div class="documento-info">
-                                    <strong>Termo de Consentimento</strong>
-                                    <span>08/04/2026</span>
+                            <div class="documento-card">
+                                <div class="documento-card-body">
+                                    <img src="/src/img/icon-documentosemfundo.svg" alt="Documento" class="documento-icone">
+                                    <div class="documento-info">
+                                        <strong>Termo de Consentimento</strong>
+                                        <span>08/04/2026</span>
+                                    </div>
+                                    <a href="#" class="acao-texto">
+                                        <img src="/src/img/icon-download.svg" alt="PDF">
+                                    </a>
                                 </div>
-                                <button class="btn btn-remarcar">PDF</button>
                             </div>
 
                         </div>
